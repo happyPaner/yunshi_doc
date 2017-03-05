@@ -1,0 +1,24 @@
+{
+    "name": "API设计文档",
+    "version": "0.0.1",
+    "description": "云师教育管理系统前后台API设计文档",
+    "keywords": [
+        "api"
+    ],
+    "homepage": "http://JSLite.io",
+    "author": "happyPaner",
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "licenses": "MIT",
+    "idoc": {
+        "theme": "colorful",
+        "md": [
+            "admin.md",
+            "student.md",
+            "teacher.md",
+            "database.md"
+        ]
+    }
+}

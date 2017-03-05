@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>API设计文档</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+</head>
+<body>
+<div class="nav-content">
+    <div class="nav">
+        <div class="logo">
+            
+                API设计文档
+            
+        </div>
+        <ul><li><a href="../index.html">admin</a></li><li><a href="../html/student.html">student</a></li><li><a href="../html/teacher.html">teacher</a></li><li class="active"><a href="../html/database.html">database</a></li></ul>    </div>
+</div>
+
+
+<div class="warpper">
+
+    <div class="page-toc">
+        <ul><li><a href="#t0数据库设计文档">数据库设计文档</a><ul><li><a href="#t1data table">data table</a><ul><li><a href="#t2学生信息表student">学生信息表student</a></li><li><a href="#t3教师信息表teacher">教师信息表teacher</a></li><li><a href="#t4员工信息表staff">员工信息表staff</a></li><li><a href="#t5资源信息表resource">资源信息表resource</a></li><li><a href="#t6订单信息表order">订单信息表order</a></li><li><a href="#t7课程信息表lesson">课程信息表lesson</a></li><li><a href="#t8课时信息表class">课时信息表class</a></li></ul></li></ul></li></ul>
+    </div>
+    
+    <div class="content markdown-body">
+        <h1 id="t0&#x6570;&#x636E;&#x5E93;&#x8BBE;&#x8BA1;&#x6587;&#x6863;">&#x6570;&#x636E;&#x5E93;&#x8BBE;&#x8BA1;&#x6587;&#x6863; <a href="#t0&#x6570;&#x636E;&#x5E93;&#x8BBE;&#x8BA1;&#x6587;&#x6863;"> # </a></h1>
+<blockquote>
+<p>&#x8BF4;&#x660E;&#xFF1A;&#x672C;&#x6570;&#x636E;&#x5E93;&#x7684;&#x6570;&#x636E;&#x8868;&#x524D;&#x7F00;&#x4E3A;ys_&#xFF0C;&#x4F8B;&#x5982;&#x5B66;&#x751F;&#x4FE1;&#x606F;&#x8868;&#x7684;&#x6570;&#x636E;&#x8868;&#x540D;&#x5B9E;&#x9645;&#x4E3A;ys_student&#xFF0C;&#x5176;&#x4ED6;&#x4E0E;&#x6B64;&#x76F8;&#x540C;&#x3002;&#x4EE5;&#x6570;&#x636E;&#x8868;&#x524D;&#x7F00;&#x65B9;&#x5F0F;&#x6765;&#x907F;&#x514D;&#x5728;&#x4E0E;&#x5176;&#x4ED6;&#x6570;&#x636E;&#x8868;&#x516C;&#x7528;&#x6570;&#x636E;&#x5E93;&#x65F6;&#x4EA7;&#x751F;&#x4E0D;&#x5FC5;&#x8981;&#x7684;&#x9519;&#x8BEF;&#x3002;</p>
+</blockquote>
+<h2 id="t1data table">data table <a href="#t1data table"> # </a></h2>
+<h3 id="t2&#x5B66;&#x751F;&#x4FE1;&#x606F;&#x8868;student">&#x5B66;&#x751F;&#x4FE1;&#x606F;&#x8868;student <a href="#t2&#x5B66;&#x751F;&#x4FE1;&#x606F;&#x8868;student"> # </a></h3>
+<p><strong>&#x5B57;&#x6BB5;</strong></p>
+<h3 id="t3&#x6559;&#x5E08;&#x4FE1;&#x606F;&#x8868;teacher">&#x6559;&#x5E08;&#x4FE1;&#x606F;&#x8868;teacher <a href="#t3&#x6559;&#x5E08;&#x4FE1;&#x606F;&#x8868;teacher"> # </a></h3>
+<p><strong>&#x5B57;&#x6BB5;</strong></p>
+<h3 id="t4&#x5458;&#x5DE5;&#x4FE1;&#x606F;&#x8868;staff">&#x5458;&#x5DE5;&#x4FE1;&#x606F;&#x8868;staff <a href="#t4&#x5458;&#x5DE5;&#x4FE1;&#x606F;&#x8868;staff"> # </a></h3>
+<p><strong>&#x5B57;&#x6BB5;</strong></p>
+<h3 id="t5&#x8D44;&#x6E90;&#x4FE1;&#x606F;&#x8868;resource">&#x8D44;&#x6E90;&#x4FE1;&#x606F;&#x8868;resource <a href="#t5&#x8D44;&#x6E90;&#x4FE1;&#x606F;&#x8868;resource"> # </a></h3>
+<p><strong>&#x5B57;&#x6BB5;</strong></p>
+<h3 id="t6&#x8BA2;&#x5355;&#x4FE1;&#x606F;&#x8868;order">&#x8BA2;&#x5355;&#x4FE1;&#x606F;&#x8868;order <a href="#t6&#x8BA2;&#x5355;&#x4FE1;&#x606F;&#x8868;order"> # </a></h3>
+<p><strong>&#x5B57;&#x6BB5;</strong></p>
+<h3 id="t7&#x8BFE;&#x7A0B;&#x4FE1;&#x606F;&#x8868;lesson">&#x8BFE;&#x7A0B;&#x4FE1;&#x606F;&#x8868;lesson <a href="#t7&#x8BFE;&#x7A0B;&#x4FE1;&#x606F;&#x8868;lesson"> # </a></h3>
+<p><strong>&#x5B57;&#x6BB5;</strong></p>
+<h3 id="t8&#x8BFE;&#x65F6;&#x4FE1;&#x606F;&#x8868;class">&#x8BFE;&#x65F6;&#x4FE1;&#x606F;&#x8868;class <a href="#t8&#x8BFE;&#x65F6;&#x4FE1;&#x606F;&#x8868;class"> # </a></h3>
+<p><strong>&#x5B57;&#x6BB5;</strong></p>
+
+        <div class="copyright">Powered by <a href="https://github.com/jaywcjlove/idoc" target="_blank">idoc</a>. Dependence <a href="https://nodejs.org">Node.js</a> run.</div>
+    </div>
+    
+</div>
+
+<script>
+    window.onload = function(){
+        var linkArray = document.querySelectorAll(".page-toc a");
+        var pathname = location.pathname;
+        var origin = location.origin;
+        linkArray.forEach(function(dom, k){
+            var id = dom.href.replace(origin+pathname+"#", '');
+            dom.removeAttribute("href")
+            dom.setAttribute("data-to", id)
+            var target = document.getElementById(id);
+            dom.onclick = function(){
+                document.body.scrollTop = target.offsetTop - 80;
+            }
+            
+        })
+    }
+</script>
+
+
+</body>
+</html>
