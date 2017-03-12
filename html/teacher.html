@@ -62,7 +62,7 @@
         confirmedNum:         //int&#xFF0C;&#x5DF2;&#x786E;&#x8BA4;&#x8BFE;&#x65F6;&#x603B;&#x6570;
         confirmedList: [        //array&#xFF0C;&#x5DF2;&#x786E;&#x8BA4;&#x8BFE;&#x65F6;&#x7684;&#x5B66;&#x751F;&#x5217;&#x8868;
             {
-                student:                   //string&#xFF0C;&#x786E;&#x8BA4;&#x8BFE;&#x65F6;&#x7684;&#x5B66;&#x751F;&#x59D3;&#x540D;
+                name:                   //string&#xFF0C;&#x786E;&#x8BA4;&#x8BFE;&#x65F6;&#x7684;&#x5B66;&#x751F;&#x59D3;&#x540D;
                 num :                   //int&#xFF0C;&#x8BE5;&#x5B66;&#x751F;&#x786E;&#x8BA4;&#x8BFE;&#x65F6;&#x6570;
             },
             {
@@ -71,8 +71,8 @@
         ],
         attendClass: [          //array&#xFF0C;&#x5F85;&#x4E0A;&#x8BFE;&#x5217;&#x8868;
             {
-                id:                  //int&#xFF0C;&#x8BE5;&#x8BFE;&#x65F6;ID
-                student&#xFF1A;               //string&#xFF0C;&#x5B66;&#x751F;&#x59D3;&#x540D;
+                classID:                  //int&#xFF0C;&#x8BE5;&#x8BFE;&#x65F6;ID
+                name&#xFF1A;               //string&#xFF0C;&#x5B66;&#x751F;&#x59D3;&#x540D;
                 date:                //string&#xFF0C;&#x4E0A;&#x8BFE;&#x65E5;&#x671F;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;2017-03-06
                 timeslot:            //string&#xFF0C;&#x4E0A;&#x8BFE;&#x65F6;&#x95F4;&#x6BB5;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;&quot;8:00-12:00&quot;,&quot;19:00-21:00&quot;
                 classNum:            //int&#xFF0C;&#x672C;&#x6B21;&#x8BFE;&#x65F6;&#x6570;
@@ -83,12 +83,12 @@
         ],
         unConfirmedList:[         //array,&#x672A;&#x786E;&#x8BA4;&#x8BFE;&#x65F6;
             {
-                id:                  //int&#xFF0C;&#x8BE5;&#x8BFE;&#x65F6;ID
-                student&#xFF1A;               //string&#xFF0C;&#x5B66;&#x751F;&#x59D3;&#x540D;
+                classID:                  //int&#xFF0C;&#x8BE5;&#x8BFE;&#x65F6;ID
+                name&#xFF1A;               //string&#xFF0C;&#x5B66;&#x751F;&#x59D3;&#x540D;
                 date:                //string&#xFF0C;&#x4E0A;&#x8BFE;&#x65E5;&#x671F;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;2017-03-06
                 timeslot:            //string&#xFF0C;&#x4E0A;&#x8BFE;&#x65F6;&#x95F4;&#x6BB5;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;&quot;8:00-12:00&quot;,&quot;19:00-21:00&quot;
                 classNum:            //int&#xFF0C;&#x672C;&#x6B21;&#x8BFE;&#x65F6;&#x6570;
-                state:               //int&#xFF0C;&#x786E;&#x8BA4;&#x72B6;&#x6001;&#xFF0C;0&#x5DF2;&#x786E;&#x8BA4;&#x6210;&#x529F;&#xFF0C;1&#x6559;&#x5E08;&#x672A;&#x53D1;&#x8D77;&#xFF0C;2&#x6559;&#x5E08;&#x5DF2;&#x53D1;&#x8D77;&#x5B66;&#x751F;&#x672A;&#x786E;&#x8BA4;&#xFF0C;3&#x5B66;&#x751F;&#x5DF2;&#x62D2;&#x7EDD;&#x786E;&#x8BA4;
+                state:               //int&#xFF0C;&#x786E;&#x8BA4;&#x72B6;&#x6001;&#xFF0C;1&#x6559;&#x5E08;&#x672A;&#x53D1;&#x8D77;&#xFF0C;2&#x6559;&#x5E08;&#x5DF2;&#x53D1;&#x8D77;&#x5B66;&#x751F;&#x672A;&#x786E;&#x8BA4;&#xFF0C;3&#x5B66;&#x751F;&#x5DF2;&#x786E;&#x8BA4;&#xFF0C;4&#x5B66;&#x751F;&#x5DF2;&#x62D2;&#x7EDD;
             },
             {
                 ...
@@ -108,13 +108,12 @@
     msg :       //string&#xFF0C;&#x8FD4;&#x56DE;&#x4FE1;&#x606F;&#x8BF4;&#x660E;
     data:[      //array&#xFF0C;&#x5B66;&#x751F;&#x4FE1;&#x606F;&#x5217;&#x8868;
         {
-            student:           //string&#xFF0C;&#x5B66;&#x751F;&#x59D3;&#x540D;
+            name:           //string&#xFF0C;&#x5B66;&#x751F;&#x59D3;&#x540D;
             phone:          //string&#xFF0C;&#x5B66;&#x751F;&#x624B;&#x673A;&#x53F7;
             grade:          //string&#xFF0C;&#x5B66;&#x751F;&#x5E74;&#x7EA7;
             lessionID:      //int&#xFF0C;&#x8BFE;&#x7A0B;ID
             subject:        //string&#xFF0C;&#x6559;&#x6388;&#x79D1;&#x76EE;
             weekClass:      //int&#xFF0C;&#x6BCF;&#x5468;&#x8BFE;&#x65F6;&#x6570;
-            usualClassTime: //string&#xFF0C;&#x4E00;&#x822C;&#x4E0A;&#x8BFE;&#x65F6;&#x95F4;
             type:           //string&#xFF0C;&#x8F85;&#x5BFC;&#x65B9;&#x5F0F;&#x4E0D;&#xFF0C;&#x4E00;&#x5BF9;&#x4E00;&#xFF0C;&#x4E00;&#x5BF9;&#x591A;&#x7B49;
             target:         //string&#xFF0C;&#x8F85;&#x5BFC;&#x76EE;&#x6807;&#xFF0C;&#x62D4;&#x9AD8;&#xFF0C;&#x51B2;&#x523A;&#x7B49;
         },
@@ -138,7 +137,7 @@
         confirmedNum:           //int&#xFF0C;&#x672C;&#x6708;&#x5DF2;&#x786E;&#x8BA4;&#x8BFE;&#x65F6;&#x6570;
         confirmedList: [        //array&#xFF0C;&#x5DF2;&#x786E;&#x8BA4;&#x8BFE;&#x65F6;&#x7684;&#x5B66;&#x751F;&#x5217;&#x8868;
             {
-                student:                   //string&#xFF0C;&#x786E;&#x8BA4;&#x8BFE;&#x65F6;&#x7684;&#x5B66;&#x751F;&#x59D3;&#x540D;
+                name:                   //string&#xFF0C;&#x786E;&#x8BA4;&#x8BFE;&#x65F6;&#x7684;&#x5B66;&#x751F;&#x59D3;&#x540D;
                 num :                   //int&#xFF0C;&#x8BE5;&#x5B66;&#x751F;&#x786E;&#x8BA4;&#x8BFE;&#x65F6;&#x6570;
             },
             {
@@ -160,8 +159,8 @@
     msg :       //string&#xFF0C;&#x8FD4;&#x56DE;&#x4FE1;&#x606F;&#x8BF4;&#x660E;
     data:[      //array&#xFF0C;&#x5B66;&#x751F;&#x4FE1;&#x606F;&#x5217;&#x8868;
         {
-            id:                  //int&#xFF0C;&#x6B64;&#x6B21;&#x6392;&#x8BFE;&#x7684;ID
-            student&#xFF1A;               //string&#xFF0C;&#x5B66;&#x751F;&#x59D3;&#x540D;
+            classID:                  //int&#xFF0C;&#x6B64;&#x6B21;&#x6392;&#x8BFE;&#x7684;ID
+            name&#xFF1A;               //string&#xFF0C;&#x5B66;&#x751F;&#x59D3;&#x540D;
             date:                //string&#xFF0C;&#x4E0A;&#x8BFE;&#x65E5;&#x671F;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;2017-03-06
             timeslot:            //string&#xFF0C;&#x4E0A;&#x8BFE;&#x65F6;&#x95F4;&#x6BB5;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;&quot;8:00-12:00&quot;,&quot;19:00-21:00&quot;
             classNum:            //int&#xFF0C;&#x672C;&#x6B21;&#x8BFE;&#x65F6;&#x6570;
@@ -184,8 +183,8 @@
     msg :       //string&#xFF0C;&#x8FD4;&#x56DE;&#x4FE1;&#x606F;&#x8BF4;&#x660E;
     data:[      //array&#xFF0C;&#x5B66;&#x751F;&#x4FE1;&#x606F;&#x5217;&#x8868;
         {
-            id:                  //int&#xFF0C;&#x8BE5;&#x8BFE;&#x65F6;ID
-            student&#xFF1A;               //string&#xFF0C;&#x5B66;&#x751F;&#x59D3;&#x540D;
+            classID:             //int&#xFF0C;&#x8BE5;&#x8BFE;&#x65F6;ID
+            name&#xFF1A;               //string&#xFF0C;&#x5B66;&#x751F;&#x59D3;&#x540D;
             date:                //string&#xFF0C;&#x4E0A;&#x8BFE;&#x65E5;&#x671F;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;2017-03-06
             timeslot:            //string&#xFF0C;&#x4E0A;&#x8BFE;&#x65F6;&#x95F4;&#x6BB5;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;&quot;8:00-12:00&quot;,&quot;19:00-21:00&quot;
             classNum:            //int&#xFF0C;&#x672C;&#x6B21;&#x8BFE;&#x65F6;&#x6570;
@@ -200,10 +199,10 @@
 <blockquote>
 <p>&#x6559;&#x5E08;&#x540C;&#x8FC7;&#x6B64;&#x63A5;&#x53E3;&#x5411;&#x5B66;&#x751F;&#x53D1;&#x8D77;&#x786E;&#x8BA4;&#x8BFE;&#x65F6;&#x8BF7;&#x6C42;&#xFF0C;&#x9700;&#x5728;&#x6539;&#x8BFE;&#x65F6;&#x5B8C;&#x6210;&#x4E4B;&#x540E;&#x53D1;&#x8D77;&#x786E;&#x8BA4;&#xFF0C;&#x5426;&#x5219;&#x62D2;&#x7EDD;&#x53D1;&#x8D77;</p>
 </blockquote>
-<p>&#x8BF7;&#x6C42;URL&#xFF1A;/t/confirmClass<br>&#x8BF7;&#x6C42;&#x65B9;&#x6CD5;&#xFF1A;put<br>&#x8BBF;&#x95EE;&#x6743;&#x9650;&#xFF1A;&#x5DF2;&#x7ED1;&#x5B9A;&#x6559;&#x5E08;&#x7528;&#x6237;  </p>
+<p>&#x8BF7;&#x6C42;URL&#xFF1A;/t/confirmClass<br>&#x8BF7;&#x6C42;&#x65B9;&#x6CD5;&#xFF1A;post<br>&#x8BBF;&#x95EE;&#x6743;&#x9650;&#xFF1A;&#x5DF2;&#x7ED1;&#x5B9A;&#x6559;&#x5E08;&#x7528;&#x6237;  </p>
 <p>&#x63D0;&#x4EA4;&#x53C2;&#x6570;&#xFF1A;</p>
 <pre><code>{
-    id:         //int&#xFF0C;&#x5F85;&#x786E;&#x8BA4;&#x8BFE;&#x65F6;id
+    classID:         //int&#xFF0C;&#x5F85;&#x786E;&#x8BA4;&#x8BFE;&#x65F6;id
 }
 </code></pre><p>&#x8FD4;&#x56DE;&#x6570;&#x636E;&#xFF1A;</p>
 <pre><code>{
@@ -222,6 +221,7 @@
     date:           //int&#xFF0C;timestamp&#xFF0C;10&#x4F4D;UNIX&#x65F6;&#x95F4;&#x6233;&#xFF0C;&#x5355;&#x4F4D;&#x79D2;
     timeslot:       //string&#xFF0C;&#x4E0A;&#x8BFE;&#x65F6;&#x95F4;&#x6BB5;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;&quot;8:00-12:00&quot;,&quot;19:00-21:00&quot;
     classNum:       //int&#xFF0C;&#x672C;&#x6B21;&#x8BFE;&#x65F6;&#x6570;
+    type:           //int, 1&#x6B63;&#x5E38;&#x4E0A;&#x8BFE;&#xFF0C;2&#x52A0;&#x8BFE;&#xFF0C;3&#x8C03;&#x8BFE;
 }
 </code></pre><p>&#x8FD4;&#x56DE;&#x53C2;&#x6570;:</p>
 <pre><code>{
