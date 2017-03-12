@@ -50,7 +50,7 @@ url参数：无
             confirmedNum:         //int，已确认课时总数
             confirmedList: [        //array，已确认课时的学生列表
                 {
-                    student:                   //string，确认课时的学生姓名
+                    name:                   //string，确认课时的学生姓名
                     num :                   //int，该学生确认课时数
                 },
                 {
@@ -59,8 +59,8 @@ url参数：无
             ],
             attendClass: [          //array，待上课列表
                 {
-                    id:                  //int，该课时ID
-                    student：               //string，学生姓名
+                    classID:                  //int，该课时ID
+                    name：               //string，学生姓名
                     date:                //string，上课日期，例如：2017-03-06
                     timeslot:            //string，上课时间段，例如："8:00-12:00","19:00-21:00"
                     classNum:            //int，本次课时数
@@ -71,12 +71,12 @@ url参数：无
             ],
             unConfirmedList:[         //array,未确认课时
                 {
-                    id:                  //int，该课时ID
-                    student：               //string，学生姓名
+                    classID:                  //int，该课时ID
+                    name：               //string，学生姓名
                     date:                //string，上课日期，例如：2017-03-06
                     timeslot:            //string，上课时间段，例如："8:00-12:00","19:00-21:00"
                     classNum:            //int，本次课时数
-                    state:               //int，确认状态，0已确认成功，1教师未发起，2教师已发起学生未确认，3学生已拒绝确认
+                    state:               //int，确认状态，1教师未发起，2教师已发起学生未确认，3学生已确认，4学生已拒绝
                 },
                 {
                     ...
@@ -102,13 +102,12 @@ URL参数：无
         msg :       //string，返回信息说明
         data:[      //array，学生信息列表
             {
-                student:           //string，学生姓名
+                name:           //string，学生姓名
                 phone:          //string，学生手机号
                 grade:          //string，学生年级
                 lessionID:      //int，课程ID
                 subject:        //string，教授科目
                 weekClass:      //int，每周课时数
-                usualClassTime: //string，一般上课时间
                 type:           //string，辅导方式不，一对一，一对多等
                 target:         //string，辅导目标，拔高，冲刺等
             },
@@ -137,7 +136,7 @@ URL参数：无
             confirmedNum:           //int，本月已确认课时数
             confirmedList: [        //array，已确认课时的学生列表
                 {
-                    student:                   //string，确认课时的学生姓名
+                    name:                   //string，确认课时的学生姓名
                     num :                   //int，该学生确认课时数
                 },
                 {
@@ -164,8 +163,8 @@ URL参数：无
         msg :       //string，返回信息说明
         data:[      //array，学生信息列表
             {
-                id:                  //int，此次排课的ID
-                student：               //string，学生姓名
+                classID:                  //int，此次排课的ID
+                name：               //string，学生姓名
                 date:                //string，上课日期，例如：2017-03-06
                 timeslot:            //string，上课时间段，例如："8:00-12:00","19:00-21:00"
                 classNum:            //int，本次课时数
@@ -193,8 +192,8 @@ URL参数：无
         msg :       //string，返回信息说明
         data:[      //array，学生信息列表
             {
-                id:                  //int，该课时ID
-                student：               //string，学生姓名
+                classID:             //int，该课时ID
+                name：               //string，学生姓名
                 date:                //string，上课日期，例如：2017-03-06
                 timeslot:            //string，上课时间段，例如："8:00-12:00","19:00-21:00"
                 classNum:            //int，本次课时数
@@ -211,13 +210,13 @@ URL参数：无
 > 教师同过此接口向学生发起确认课时请求，需在改课时完成之后发起确认，否则拒绝发起
 
 请求URL：/t/confirmClass  
-请求方法：put  
+请求方法：post  
 访问权限：已绑定教师用户  
 
 提交参数：
 
     {
-        id:         //int，待确认课时id
+        classID:         //int，待确认课时id
     }
 
 返回数据：
@@ -242,6 +241,7 @@ URL参数：无
         date:           //int，timestamp，10位UNIX时间戳，单位秒
         timeslot:       //string，上课时间段，例如："8:00-12:00","19:00-21:00"
         classNum:       //int，本次课时数
+        type:           //int, 1正常上课，2加课，3调课
     }
 
 返回参数:
