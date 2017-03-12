@@ -19,6 +19,10 @@
 1、更换/index[lessonList]、/restClass接口的allNum字段为allClass，以对应数据库字段名称
 2、更换/index[lessonList]、/restClass接口的classID字段为lessonID，修正错误
 
+### 2017-03-12 api更改说明
+
+1、添加解除绑定微信接口
+
 ## api
 
 ### 绑定微信：/bind
@@ -36,6 +40,23 @@
         grade:      //string，学生年级
         phone:      //string，学生手机号
     }
+
+返回数据：
+
+    {
+        code:       //int，0代表成功, 非0代表失败
+        msg :       //strin，成功或者失败说明
+    }
+
+### 解除绑定微信：/unbind
+
+> 解除绑定微信
+
+请求URL：/s/unbind  
+请求方法：get  
+访问权限：所有用户
+
+提交数据：无
 
 返回数据：
 
