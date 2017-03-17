@@ -65,7 +65,6 @@
             name:       //string，姓名
             phone:      //string，手机号
             roler:      //string，职位角色
-            createTime: //int，创建时的UNIX时间戳，10位，以秒为单位
         }
     }
 
@@ -116,11 +115,11 @@
 
 ## 员工组织 Staff
 
-### 查询员工 /
+### 查询员工 /info
 
 > 获取员工信息
 
-请求URL：/admin/staff   
+请求URL：/admin/staff/info   
 请求方法：get  
 访问权限：已登录用户  
 
@@ -138,6 +137,7 @@
         msg :       //string，成功或者失败说明
         data: [
             {
+                staffID:    //int，员工ID
                 name:       //string，员工姓名
                 phone:      //string，手机号码
                 roler:      //string，员工职位角色
@@ -185,6 +185,7 @@
 提交数据：
 
     {
+        staffID:    //int，必填，员工ID
         name:       //string，选填，用户名
         phone:      //string，选填，手机号码
         roler:      //int，选填，员工角色（职位）代码，通过/user/roler接口获得全部角色，只有超级管理员或者总经理具有更改权限
@@ -402,6 +403,7 @@
 提交数据：
 
     {
+        teacherID:      //int，教师ID
         name:           //string，教师姓名
         phone:          //string，手机号码
         sex:            //string，教师性别，男/女
@@ -419,6 +421,14 @@
         zone:           //string，授课区域
         org:            //string，老师代课机构
         teachIntro:     //string，教学简介
+        infoFrom:       //string，信息来源
+        contactID:      //string，必填，公司接待人员ID
+    
+        recommendTeacher:   //string，可推荐老师
+        assessment:         //string，机构评价
+        state:              //int，审核状态，1审核未通过，2审核通过，3已签约，4加入黑名单
+        reviewer:           //string，审核人姓名
+        reviewTime:         //int，审核时间，审核时的UNIX时间戳，10位，以秒为单位
     }
 
 返回数据:
@@ -550,21 +560,37 @@
 
 ### 添加订单 /add
 
-> 超级管理员或上级主管添加普通员工管理员
+> 添加学生的付款订单
 
-请求URL：/admin/staff/add   
+请求URL：/admin/order/add   
 请求方法：post  
-访问权限：上级主管  
+访问权限：登录用户  
 
 提交数据：
 
-    {
-        name:       //string，必填，用户名
-        password:   //string，必填，用户密码
-        repassword: //string，必填，确认密码
-        phone:      //string，必填，手机号码
-        roler:      //int，必填，员工角色（职位）代码，通过/user/roler接口获得全部角色
-    }
+    studentID:      //int，学生ID
+    payMethod:      //string，付款方式，现金/微信/支付宝/银行转账/...
+    amount:         //int，缴费金额
+    lesson: [       //array，随订单一起确定的课程
+        {
+            teacheID:       //int，教师ID
+            subject:        //string，科目
+            allClass:       //int，总课时数
+            preprice:       //int，单课时费
+            weekClass:      //int，一周上几节课
+            firstClassDate: //string，第一次上课日期，2017-3-18
+            startDate:      //string，课程开始日期，2017-3-18
+            endDate:        //string，课程结束日期，2017-3-18
+            classType:      //string，代课类型，一对一
+            target:         //string，辅导目标，拔高/冲刺/...
+            parentDemand:   //string，家长期望
+            studentDemand:  //string，学生期望  
+            program:        //string，辅导方案
+        },
+        {
+            ...
+        }
+    ]
 
 返回数据:
 
@@ -573,6 +599,21 @@
         msg :       //string，成功或者失败说明
     }
 
-### 更改订单 /update
-
 ### 删除订单 /delete
+
+请求URL：/admin/order/delete   
+请求方法：delete  
+访问权限：销售人员  
+
+提交数据：
+
+    {
+        orderID:    //int，订单ID
+    }
+
+返回数据:
+
+    {
+        code:       //int，0代表成功, 非0代表失败
+        msg :       //string，成功或者失败说明
+    }

@@ -21,7 +21,7 @@
 <div class="warpper">
 
     <div class="page-toc">
-        <ul><li><a href="#t0后台管理系统API文档">后台管理系统API文档</a><ul><li><a href="#t1用户 User">用户 User</a><ul><li><a href="#t2登录 /login">登录 /login</a></li><li><a href="#t3退出 /logout">退出 /logout</a></li><li><a href="#t4获取资料 /info">获取资料 /info</a></li><li><a href="#t5修改资料 /update">修改资料 /update</a></li><li><a href="#t6修改密码 /password">修改密码 /password</a></li></ul></li><li><a href="#t7员工组织 Staff">员工组织 Staff</a><ul><li><a href="#t8查询员工 /">查询员工 /</a></li><li><a href="#t9添加员工 /add">添加员工 /add</a></li><li><a href="#t10更改员工 /update">更改员工 /update</a></li><li><a href="#t11删除员工 /delete">删除员工 /delete</a></li></ul></li><li><a href="#t12员工角色 Roler">员工角色 Roler</a><ul><li><a href="#t13获取角色 /">获取角色 /</a></li></ul></li><li><a href="#t14学生 Student">学生 Student</a></li><li><a href="#t15教师 Teacher">教师 Teacher</a><ul><li><a href="#t16教师列表 /list">教师列表 /list</a></li><li><a href="#t17教师信息 /info">教师信息 /info</a></li><li><a href="#t18添加教师 /add">添加教师 /add</a></li><li><a href="#t19更改教师 /update">更改教师 /update</a></li><li><a href="#t20删除教师 /delete">删除教师 /delete</a></li></ul></li><li><a href="#t21订单 Order">订单 Order</a><ul><li><a href="#t22订单列表 /list">订单列表 /list</a></li><li><a href="#t23订单信息 /info">订单信息 /info</a></li><li><a href="#t24添加订单 /add">添加订单 /add</a></li><li><a href="#t25更改订单 /update">更改订单 /update</a></li><li><a href="#t26删除订单 /delete">删除订单 /delete</a></li></ul></li></ul></li></ul>
+        <ul><li><a href="#t0后台管理系统API文档">后台管理系统API文档</a><ul><li><a href="#t1用户 User">用户 User</a><ul><li><a href="#t2登录 /login">登录 /login</a></li><li><a href="#t3退出 /logout">退出 /logout</a></li><li><a href="#t4获取资料 /info">获取资料 /info</a></li><li><a href="#t5修改资料 /update">修改资料 /update</a></li><li><a href="#t6修改密码 /password">修改密码 /password</a></li></ul></li><li><a href="#t7员工组织 Staff">员工组织 Staff</a><ul><li><a href="#t8查询员工 /info">查询员工 /info</a></li><li><a href="#t9添加员工 /add">添加员工 /add</a></li><li><a href="#t10更改员工 /update">更改员工 /update</a></li><li><a href="#t11删除员工 /delete">删除员工 /delete</a></li></ul></li><li><a href="#t12员工角色 Roler">员工角色 Roler</a><ul><li><a href="#t13获取角色 /">获取角色 /</a></li></ul></li><li><a href="#t14学生 Student">学生 Student</a></li><li><a href="#t15教师 Teacher">教师 Teacher</a><ul><li><a href="#t16教师列表 /list">教师列表 /list</a></li><li><a href="#t17教师信息 /info">教师信息 /info</a></li><li><a href="#t18添加教师 /add">添加教师 /add</a></li><li><a href="#t19更改教师 /update">更改教师 /update</a></li><li><a href="#t20删除教师 /delete">删除教师 /delete</a></li></ul></li><li><a href="#t21订单 Order">订单 Order</a><ul><li><a href="#t22订单列表 /list">订单列表 /list</a></li><li><a href="#t23订单信息 /info">订单信息 /info</a></li><li><a href="#t24添加订单 /add">添加订单 /add</a></li><li><a href="#t25删除订单 /delete">删除订单 /delete</a></li></ul></li></ul></li></ul>
     </div>
     
     <div class="content markdown-body">
@@ -72,7 +72,6 @@
         name:       //string&#xFF0C;&#x59D3;&#x540D;
         phone:      //string&#xFF0C;&#x624B;&#x673A;&#x53F7;
         roler:      //string&#xFF0C;&#x804C;&#x4F4D;&#x89D2;&#x8272;
-        createTime: //int&#xFF0C;&#x521B;&#x5EFA;&#x65F6;&#x7684;UNIX&#x65F6;&#x95F4;&#x6233;&#xFF0C;10&#x4F4D;&#xFF0C;&#x4EE5;&#x79D2;&#x4E3A;&#x5355;&#x4F4D;
     }
 }
 </code></pre><h3 id="t5&#x4FEE;&#x6539;&#x8D44;&#x6599; /update">&#x4FEE;&#x6539;&#x8D44;&#x6599; /update <a href="#t5&#x4FEE;&#x6539;&#x8D44;&#x6599; /update"> # </a></h3>
@@ -107,11 +106,11 @@
     msg :       //string&#xFF0C;&#x6210;&#x529F;&#x6216;&#x8005;&#x5931;&#x8D25;&#x8BF4;&#x660E;
 }
 </code></pre><h2 id="t7&#x5458;&#x5DE5;&#x7EC4;&#x7EC7; Staff">&#x5458;&#x5DE5;&#x7EC4;&#x7EC7; Staff <a href="#t7&#x5458;&#x5DE5;&#x7EC4;&#x7EC7; Staff"> # </a></h2>
-<h3 id="t8&#x67E5;&#x8BE2;&#x5458;&#x5DE5; /">&#x67E5;&#x8BE2;&#x5458;&#x5DE5; / <a href="#t8&#x67E5;&#x8BE2;&#x5458;&#x5DE5; /"> # </a></h3>
+<h3 id="t8&#x67E5;&#x8BE2;&#x5458;&#x5DE5; /info">&#x67E5;&#x8BE2;&#x5458;&#x5DE5; /info <a href="#t8&#x67E5;&#x8BE2;&#x5458;&#x5DE5; /info"> # </a></h3>
 <blockquote>
 <p>&#x83B7;&#x53D6;&#x5458;&#x5DE5;&#x4FE1;&#x606F;</p>
 </blockquote>
-<p>&#x8BF7;&#x6C42;URL&#xFF1A;/admin/staff<br>&#x8BF7;&#x6C42;&#x65B9;&#x6CD5;&#xFF1A;get<br>&#x8BBF;&#x95EE;&#x6743;&#x9650;&#xFF1A;&#x5DF2;&#x767B;&#x5F55;&#x7528;&#x6237;  </p>
+<p>&#x8BF7;&#x6C42;URL&#xFF1A;/admin/staff/info<br>&#x8BF7;&#x6C42;&#x65B9;&#x6CD5;&#xFF1A;get<br>&#x8BBF;&#x95EE;&#x6743;&#x9650;&#xFF1A;&#x5DF2;&#x767B;&#x5F55;&#x7528;&#x6237;  </p>
 <p>&#x63D0;&#x4EA4;&#x6570;&#x636E;&#xFF1A;</p>
 <pre><code>{
     staffID:    //int&#xFF0C;&#x9009;&#x586B;&#xFF0C;&#x8981;&#x67E5;&#x8BE2;&#x7684;&#x5458;&#x5DE5;ID&#xFF0C;&#x503C;&#x4E3A;&#x7A7A;&#x65F6;&#x8FD4;&#x56DE;&#x6240;&#x6709;&#x5458;&#x5DE5;&#x4FE1;&#x606F;
@@ -123,6 +122,7 @@
     msg :       //string&#xFF0C;&#x6210;&#x529F;&#x6216;&#x8005;&#x5931;&#x8D25;&#x8BF4;&#x660E;
     data: [
         {
+            staffID:    //int&#xFF0C;&#x5458;&#x5DE5;ID
             name:       //string&#xFF0C;&#x5458;&#x5DE5;&#x59D3;&#x540D;
             phone:      //string&#xFF0C;&#x624B;&#x673A;&#x53F7;&#x7801;
             roler:      //string&#xFF0C;&#x5458;&#x5DE5;&#x804C;&#x4F4D;&#x89D2;&#x8272;
@@ -158,6 +158,7 @@
 <p>&#x8BF7;&#x6C42;URL&#xFF1A;/admin/staff/update<br>&#x8BF7;&#x6C42;&#x65B9;&#x6CD5;&#xFF1A;put<br>&#x8BBF;&#x95EE;&#x6743;&#x9650;&#xFF1A;&#x6240;&#x6709;&#x7528;&#x6237;  </p>
 <p>&#x63D0;&#x4EA4;&#x6570;&#x636E;&#xFF1A;</p>
 <pre><code>{
+    staffID:    //int&#xFF0C;&#x5FC5;&#x586B;&#xFF0C;&#x5458;&#x5DE5;ID
     name:       //string&#xFF0C;&#x9009;&#x586B;&#xFF0C;&#x7528;&#x6237;&#x540D;
     phone:      //string&#xFF0C;&#x9009;&#x586B;&#xFF0C;&#x624B;&#x673A;&#x53F7;&#x7801;
     roler:      //int&#xFF0C;&#x9009;&#x586B;&#xFF0C;&#x5458;&#x5DE5;&#x89D2;&#x8272;&#xFF08;&#x804C;&#x4F4D;&#xFF09;&#x4EE3;&#x7801;&#xFF0C;&#x901A;&#x8FC7;/user/roler&#x63A5;&#x53E3;&#x83B7;&#x5F97;&#x5168;&#x90E8;&#x89D2;&#x8272;&#xFF0C;&#x53EA;&#x6709;&#x8D85;&#x7EA7;&#x7BA1;&#x7406;&#x5458;&#x6216;&#x8005;&#x603B;&#x7ECF;&#x7406;&#x5177;&#x6709;&#x66F4;&#x6539;&#x6743;&#x9650;
@@ -333,6 +334,7 @@
 <p>&#x8BF7;&#x6C42;URL&#xFF1A;/admin/teacher/update<br>&#x8BF7;&#x6C42;&#x65B9;&#x6CD5;&#xFF1A;put<br>&#x8BBF;&#x95EE;&#x6743;&#x9650;&#xFF1A;&#x6240;&#x6709;&#x7528;&#x6237;  </p>
 <p>&#x63D0;&#x4EA4;&#x6570;&#x636E;&#xFF1A;</p>
 <pre><code>{
+    teacherID:      //int&#xFF0C;&#x6559;&#x5E08;ID
     name:           //string&#xFF0C;&#x6559;&#x5E08;&#x59D3;&#x540D;
     phone:          //string&#xFF0C;&#x624B;&#x673A;&#x53F7;&#x7801;
     sex:            //string&#xFF0C;&#x6559;&#x5E08;&#x6027;&#x522B;&#xFF0C;&#x7537;/&#x5973;
@@ -350,6 +352,14 @@
     zone:           //string&#xFF0C;&#x6388;&#x8BFE;&#x533A;&#x57DF;
     org:            //string&#xFF0C;&#x8001;&#x5E08;&#x4EE3;&#x8BFE;&#x673A;&#x6784;
     teachIntro:     //string&#xFF0C;&#x6559;&#x5B66;&#x7B80;&#x4ECB;
+    infoFrom:       //string&#xFF0C;&#x4FE1;&#x606F;&#x6765;&#x6E90;
+    contactID:      //string&#xFF0C;&#x5FC5;&#x586B;&#xFF0C;&#x516C;&#x53F8;&#x63A5;&#x5F85;&#x4EBA;&#x5458;ID
+
+    recommendTeacher:   //string&#xFF0C;&#x53EF;&#x63A8;&#x8350;&#x8001;&#x5E08;
+    assessment:         //string&#xFF0C;&#x673A;&#x6784;&#x8BC4;&#x4EF7;
+    state:              //int&#xFF0C;&#x5BA1;&#x6838;&#x72B6;&#x6001;&#xFF0C;1&#x5BA1;&#x6838;&#x672A;&#x901A;&#x8FC7;&#xFF0C;2&#x5BA1;&#x6838;&#x901A;&#x8FC7;&#xFF0C;3&#x5DF2;&#x7B7E;&#x7EA6;&#xFF0C;4&#x52A0;&#x5165;&#x9ED1;&#x540D;&#x5355;
+    reviewer:           //string&#xFF0C;&#x5BA1;&#x6838;&#x4EBA;&#x59D3;&#x540D;
+    reviewTime:         //int&#xFF0C;&#x5BA1;&#x6838;&#x65F6;&#x95F4;&#xFF0C;&#x5BA1;&#x6838;&#x65F6;&#x7684;UNIX&#x65F6;&#x95F4;&#x6233;&#xFF0C;10&#x4F4D;&#xFF0C;&#x4EE5;&#x79D2;&#x4E3A;&#x5355;&#x4F4D;
 }
 </code></pre><p>&#x8FD4;&#x56DE;&#x6570;&#x636E;:</p>
 <pre><code>{
@@ -455,25 +465,50 @@
 }
 </code></pre><h3 id="t24&#x6DFB;&#x52A0;&#x8BA2;&#x5355; /add">&#x6DFB;&#x52A0;&#x8BA2;&#x5355; /add <a href="#t24&#x6DFB;&#x52A0;&#x8BA2;&#x5355; /add"> # </a></h3>
 <blockquote>
-<p>&#x8D85;&#x7EA7;&#x7BA1;&#x7406;&#x5458;&#x6216;&#x4E0A;&#x7EA7;&#x4E3B;&#x7BA1;&#x6DFB;&#x52A0;&#x666E;&#x901A;&#x5458;&#x5DE5;&#x7BA1;&#x7406;&#x5458;</p>
+<p>&#x6DFB;&#x52A0;&#x5B66;&#x751F;&#x7684;&#x4ED8;&#x6B3E;&#x8BA2;&#x5355;</p>
 </blockquote>
-<p>&#x8BF7;&#x6C42;URL&#xFF1A;/admin/staff/add<br>&#x8BF7;&#x6C42;&#x65B9;&#x6CD5;&#xFF1A;post<br>&#x8BBF;&#x95EE;&#x6743;&#x9650;&#xFF1A;&#x4E0A;&#x7EA7;&#x4E3B;&#x7BA1;  </p>
+<p>&#x8BF7;&#x6C42;URL&#xFF1A;/admin/order/add<br>&#x8BF7;&#x6C42;&#x65B9;&#x6CD5;&#xFF1A;post<br>&#x8BBF;&#x95EE;&#x6743;&#x9650;&#xFF1A;&#x767B;&#x5F55;&#x7528;&#x6237;  </p>
+<p>&#x63D0;&#x4EA4;&#x6570;&#x636E;&#xFF1A;</p>
+<pre><code>studentID:      //int&#xFF0C;&#x5B66;&#x751F;ID
+payMethod:      //string&#xFF0C;&#x4ED8;&#x6B3E;&#x65B9;&#x5F0F;&#xFF0C;&#x73B0;&#x91D1;/&#x5FAE;&#x4FE1;/&#x652F;&#x4ED8;&#x5B9D;/&#x94F6;&#x884C;&#x8F6C;&#x8D26;/...
+amount:         //int&#xFF0C;&#x7F34;&#x8D39;&#x91D1;&#x989D;
+lesson: [       //array&#xFF0C;&#x968F;&#x8BA2;&#x5355;&#x4E00;&#x8D77;&#x786E;&#x5B9A;&#x7684;&#x8BFE;&#x7A0B;
+    {
+        teacheID:       //int&#xFF0C;&#x6559;&#x5E08;ID
+        subject:        //string&#xFF0C;&#x79D1;&#x76EE;
+        allClass:       //int&#xFF0C;&#x603B;&#x8BFE;&#x65F6;&#x6570;
+        preprice:       //int&#xFF0C;&#x5355;&#x8BFE;&#x65F6;&#x8D39;
+        weekClass:      //int&#xFF0C;&#x4E00;&#x5468;&#x4E0A;&#x51E0;&#x8282;&#x8BFE;
+        firstClassDate: //string&#xFF0C;&#x7B2C;&#x4E00;&#x6B21;&#x4E0A;&#x8BFE;&#x65E5;&#x671F;&#xFF0C;2017-3-18
+        startDate:      //string&#xFF0C;&#x8BFE;&#x7A0B;&#x5F00;&#x59CB;&#x65E5;&#x671F;&#xFF0C;2017-3-18
+        endDate:        //string&#xFF0C;&#x8BFE;&#x7A0B;&#x7ED3;&#x675F;&#x65E5;&#x671F;&#xFF0C;2017-3-18
+        classType:      //string&#xFF0C;&#x4EE3;&#x8BFE;&#x7C7B;&#x578B;&#xFF0C;&#x4E00;&#x5BF9;&#x4E00;
+        target:         //string&#xFF0C;&#x8F85;&#x5BFC;&#x76EE;&#x6807;&#xFF0C;&#x62D4;&#x9AD8;/&#x51B2;&#x523A;/...
+        parentDemand:   //string&#xFF0C;&#x5BB6;&#x957F;&#x671F;&#x671B;
+        studentDemand:  //string&#xFF0C;&#x5B66;&#x751F;&#x671F;&#x671B;  
+        program:        //string&#xFF0C;&#x8F85;&#x5BFC;&#x65B9;&#x6848;
+    },
+    {
+        ...
+    }
+]
+</code></pre><p>&#x8FD4;&#x56DE;&#x6570;&#x636E;:</p>
+<pre><code>{
+    code:       //int&#xFF0C;0&#x4EE3;&#x8868;&#x6210;&#x529F;, &#x975E;0&#x4EE3;&#x8868;&#x5931;&#x8D25;
+    msg :       //string&#xFF0C;&#x6210;&#x529F;&#x6216;&#x8005;&#x5931;&#x8D25;&#x8BF4;&#x660E;
+}
+</code></pre><h3 id="t25&#x5220;&#x9664;&#x8BA2;&#x5355; /delete">&#x5220;&#x9664;&#x8BA2;&#x5355; /delete <a href="#t25&#x5220;&#x9664;&#x8BA2;&#x5355; /delete"> # </a></h3>
+<p>&#x8BF7;&#x6C42;URL&#xFF1A;/admin/order/delete<br>&#x8BF7;&#x6C42;&#x65B9;&#x6CD5;&#xFF1A;delete<br>&#x8BBF;&#x95EE;&#x6743;&#x9650;&#xFF1A;&#x9500;&#x552E;&#x4EBA;&#x5458;  </p>
 <p>&#x63D0;&#x4EA4;&#x6570;&#x636E;&#xFF1A;</p>
 <pre><code>{
-    name:       //string&#xFF0C;&#x5FC5;&#x586B;&#xFF0C;&#x7528;&#x6237;&#x540D;
-    password:   //string&#xFF0C;&#x5FC5;&#x586B;&#xFF0C;&#x7528;&#x6237;&#x5BC6;&#x7801;
-    repassword: //string&#xFF0C;&#x5FC5;&#x586B;&#xFF0C;&#x786E;&#x8BA4;&#x5BC6;&#x7801;
-    phone:      //string&#xFF0C;&#x5FC5;&#x586B;&#xFF0C;&#x624B;&#x673A;&#x53F7;&#x7801;
-    roler:      //int&#xFF0C;&#x5FC5;&#x586B;&#xFF0C;&#x5458;&#x5DE5;&#x89D2;&#x8272;&#xFF08;&#x804C;&#x4F4D;&#xFF09;&#x4EE3;&#x7801;&#xFF0C;&#x901A;&#x8FC7;/user/roler&#x63A5;&#x53E3;&#x83B7;&#x5F97;&#x5168;&#x90E8;&#x89D2;&#x8272;
+    orderID:    //int&#xFF0C;&#x8BA2;&#x5355;ID
 }
 </code></pre><p>&#x8FD4;&#x56DE;&#x6570;&#x636E;:</p>
 <pre><code>{
     code:       //int&#xFF0C;0&#x4EE3;&#x8868;&#x6210;&#x529F;, &#x975E;0&#x4EE3;&#x8868;&#x5931;&#x8D25;
     msg :       //string&#xFF0C;&#x6210;&#x529F;&#x6216;&#x8005;&#x5931;&#x8D25;&#x8BF4;&#x660E;
 }
-</code></pre><h3 id="t25&#x66F4;&#x6539;&#x8BA2;&#x5355; /update">&#x66F4;&#x6539;&#x8BA2;&#x5355; /update <a href="#t25&#x66F4;&#x6539;&#x8BA2;&#x5355; /update"> # </a></h3>
-<h3 id="t26&#x5220;&#x9664;&#x8BA2;&#x5355; /delete">&#x5220;&#x9664;&#x8BA2;&#x5355; /delete <a href="#t26&#x5220;&#x9664;&#x8BA2;&#x5355; /delete"> # </a></h3>
-
+</code></pre>
         <div class="copyright">Powered by <a href="https://github.com/jaywcjlove/idoc" target="_blank">idoc</a>. Dependence <a href="https://nodejs.org">Node.js</a> run.</div>
     </div>
     
