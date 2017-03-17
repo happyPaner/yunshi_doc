@@ -568,30 +568,31 @@
 
 提交数据：
 
-    studentID:      //int，学生ID
-    payMethod:      //string，付款方式，现金/微信/支付宝/银行转账/...
-    amount:         //int，缴费金额
-    lesson: [       //array，随订单一起确定的课程
-        {
-            teacheID:       //int，教师ID
-            subject:        //string，科目
-            allClass:       //int，总课时数
-            preprice:       //int，单课时费
-            weekClass:      //int，一周上几节课
-            firstClassDate: //string，第一次上课日期，2017-3-18
-            startDate:      //string，课程开始日期，2017-3-18
-            endDate:        //string，课程结束日期，2017-3-18
-            classType:      //string，代课类型，一对一
-            target:         //string，辅导目标，拔高/冲刺/...
-            parentDemand:   //string，家长期望
-            studentDemand:  //string，学生期望  
-            program:        //string，辅导方案
-        },
-        {
-            ...
-        }
-    ]
-
+    {
+        studentID:      //int，学生ID
+        payMethod:      //string，付款方式，现金/微信/支付宝/银行转账/...
+        amount:         //int，缴费金额
+        lesson: [       //array，随订单一起确定的课程
+            {
+                teacherID:       //int，教师ID
+                subject:        //string，科目
+                allClass:       //int，总课时数
+                preprice:       //int，单课时费
+                weekClass:      //int，一周上几节课
+                firstClassDate: //string，第一次上课日期，2017-3-18
+                startDate:      //string，课程开始日期，2017-3-18
+                endDate:        //string，课程结束日期，2017-3-18
+                classType:      //string，代课类型，一对一
+                target:         //string，辅导目标，拔高/冲刺/...
+                parentDemand:   //string，家长期望
+                studentDemand:  //string，学生期望  
+                program:        //string，辅导方案
+            },
+            {
+                ...
+            }
+        ]
+    }
 返回数据:
 
     {

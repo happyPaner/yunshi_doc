@@ -469,29 +469,31 @@
 </blockquote>
 <p>&#x8BF7;&#x6C42;URL&#xFF1A;/admin/order/add<br>&#x8BF7;&#x6C42;&#x65B9;&#x6CD5;&#xFF1A;post<br>&#x8BBF;&#x95EE;&#x6743;&#x9650;&#xFF1A;&#x767B;&#x5F55;&#x7528;&#x6237;  </p>
 <p>&#x63D0;&#x4EA4;&#x6570;&#x636E;&#xFF1A;</p>
-<pre><code>studentID:      //int&#xFF0C;&#x5B66;&#x751F;ID
-payMethod:      //string&#xFF0C;&#x4ED8;&#x6B3E;&#x65B9;&#x5F0F;&#xFF0C;&#x73B0;&#x91D1;/&#x5FAE;&#x4FE1;/&#x652F;&#x4ED8;&#x5B9D;/&#x94F6;&#x884C;&#x8F6C;&#x8D26;/...
-amount:         //int&#xFF0C;&#x7F34;&#x8D39;&#x91D1;&#x989D;
-lesson: [       //array&#xFF0C;&#x968F;&#x8BA2;&#x5355;&#x4E00;&#x8D77;&#x786E;&#x5B9A;&#x7684;&#x8BFE;&#x7A0B;
-    {
-        teacheID:       //int&#xFF0C;&#x6559;&#x5E08;ID
-        subject:        //string&#xFF0C;&#x79D1;&#x76EE;
-        allClass:       //int&#xFF0C;&#x603B;&#x8BFE;&#x65F6;&#x6570;
-        preprice:       //int&#xFF0C;&#x5355;&#x8BFE;&#x65F6;&#x8D39;
-        weekClass:      //int&#xFF0C;&#x4E00;&#x5468;&#x4E0A;&#x51E0;&#x8282;&#x8BFE;
-        firstClassDate: //string&#xFF0C;&#x7B2C;&#x4E00;&#x6B21;&#x4E0A;&#x8BFE;&#x65E5;&#x671F;&#xFF0C;2017-3-18
-        startDate:      //string&#xFF0C;&#x8BFE;&#x7A0B;&#x5F00;&#x59CB;&#x65E5;&#x671F;&#xFF0C;2017-3-18
-        endDate:        //string&#xFF0C;&#x8BFE;&#x7A0B;&#x7ED3;&#x675F;&#x65E5;&#x671F;&#xFF0C;2017-3-18
-        classType:      //string&#xFF0C;&#x4EE3;&#x8BFE;&#x7C7B;&#x578B;&#xFF0C;&#x4E00;&#x5BF9;&#x4E00;
-        target:         //string&#xFF0C;&#x8F85;&#x5BFC;&#x76EE;&#x6807;&#xFF0C;&#x62D4;&#x9AD8;/&#x51B2;&#x523A;/...
-        parentDemand:   //string&#xFF0C;&#x5BB6;&#x957F;&#x671F;&#x671B;
-        studentDemand:  //string&#xFF0C;&#x5B66;&#x751F;&#x671F;&#x671B;  
-        program:        //string&#xFF0C;&#x8F85;&#x5BFC;&#x65B9;&#x6848;
-    },
-    {
-        ...
-    }
-]
+<pre><code>{
+    studentID:      //int&#xFF0C;&#x5B66;&#x751F;ID
+    payMethod:      //string&#xFF0C;&#x4ED8;&#x6B3E;&#x65B9;&#x5F0F;&#xFF0C;&#x73B0;&#x91D1;/&#x5FAE;&#x4FE1;/&#x652F;&#x4ED8;&#x5B9D;/&#x94F6;&#x884C;&#x8F6C;&#x8D26;/...
+    amount:         //int&#xFF0C;&#x7F34;&#x8D39;&#x91D1;&#x989D;
+    lesson: [       //array&#xFF0C;&#x968F;&#x8BA2;&#x5355;&#x4E00;&#x8D77;&#x786E;&#x5B9A;&#x7684;&#x8BFE;&#x7A0B;
+        {
+            teacheID:       //int&#xFF0C;&#x6559;&#x5E08;ID
+            subject:        //string&#xFF0C;&#x79D1;&#x76EE;
+            allClass:       //int&#xFF0C;&#x603B;&#x8BFE;&#x65F6;&#x6570;
+            preprice:       //int&#xFF0C;&#x5355;&#x8BFE;&#x65F6;&#x8D39;
+            weekClass:      //int&#xFF0C;&#x4E00;&#x5468;&#x4E0A;&#x51E0;&#x8282;&#x8BFE;
+            firstClassDate: //string&#xFF0C;&#x7B2C;&#x4E00;&#x6B21;&#x4E0A;&#x8BFE;&#x65E5;&#x671F;&#xFF0C;2017-3-18
+            startDate:      //string&#xFF0C;&#x8BFE;&#x7A0B;&#x5F00;&#x59CB;&#x65E5;&#x671F;&#xFF0C;2017-3-18
+            endDate:        //string&#xFF0C;&#x8BFE;&#x7A0B;&#x7ED3;&#x675F;&#x65E5;&#x671F;&#xFF0C;2017-3-18
+            classType:      //string&#xFF0C;&#x4EE3;&#x8BFE;&#x7C7B;&#x578B;&#xFF0C;&#x4E00;&#x5BF9;&#x4E00;
+            target:         //string&#xFF0C;&#x8F85;&#x5BFC;&#x76EE;&#x6807;&#xFF0C;&#x62D4;&#x9AD8;/&#x51B2;&#x523A;/...
+            parentDemand:   //string&#xFF0C;&#x5BB6;&#x957F;&#x671F;&#x671B;
+            studentDemand:  //string&#xFF0C;&#x5B66;&#x751F;&#x671F;&#x671B;  
+            program:        //string&#xFF0C;&#x8F85;&#x5BFC;&#x65B9;&#x6848;
+        },
+        {
+            ...
+        }
+    ]
+}
 </code></pre><p>&#x8FD4;&#x56DE;&#x6570;&#x636E;:</p>
 <pre><code>{
     code:       //int&#xFF0C;0&#x4EE3;&#x8868;&#x6210;&#x529F;, &#x975E;0&#x4EE3;&#x8868;&#x5931;&#x8D25;
