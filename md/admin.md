@@ -487,21 +487,23 @@
                 {
                     orderID:        //int，订单ID
                     name:           //string，学生姓名
-                    age:            //int，学生年龄
                     phone:          //string，学生手机号
                     amount:         //int，缴费金额
+                    saler:          //string，销售人员姓名
                     state:          //int，状态，1已提交未被确认，2已被财务确认，3订单被取消
                     createTime:     //int，订单创建时间，10位UNIX时间戳
                     lesson: [
                         {
                             lessonID:       //int，课程ID
                             name:           //string，教师姓名
-                            teacheAge:      //int，教龄
+                            teachAge:      //int，教龄
                             phone:          //string，联系电话
                             subject:        //string，科目
                             allClass:       //int，所有课时
+                            consumedClass:  //int，已消耗的课时
                             preprice:       //int，单课时费
                             classType:      //string，代课类型，一对一
+                            state:          //int，课程状态
                         },
                         {
                             ...
@@ -535,9 +537,9 @@
         data: {
             orderID:        //int，订单ID
             name:           //string，学生姓名
-            age:            //int，学生年龄
             phone:          //string，学生手机号
             amount:         //int，缴费金额
+            saler:          //string，销售者姓名
             state:          //int，状态，1已提交未被确认，2已被财务确认，3订单被取消
             createTime:     //int，订单创建时间，10位UNIX时间戳
             lesson: [
@@ -548,6 +550,7 @@
                     phone:          //string，联系电话
                     subject:        //string，科目
                     allClass:       //int，所有课时
+                    consumedClass:  //int，已消耗的课时数
                     preprice:       //int，单课时费
                     classType:      //string，代课类型，一对一
                 },
@@ -572,6 +575,7 @@
         studentID:      //int，学生ID
         payMethod:      //string，付款方式，现金/微信/支付宝/银行转账/...
         amount:         //int，缴费金额
+        salerID:        //int，销售员工ID
         lesson: [       //array，随订单一起确定的课程
             {
                 teacherID:       //int，教师ID
@@ -602,6 +606,8 @@
 
 ### 删除订单 /delete
 
+> 删除订单并删除当前订单的课程
+
 请求URL：/admin/order/delete   
 请求方法：delete  
 访问权限：销售人员  
@@ -610,6 +616,169 @@
 
     {
         orderID:    //int，订单ID
+    }
+
+返回数据:
+
+    {
+        code:       //int，0代表成功, 非0代表失败
+        msg :       //string，成功或者失败说明
+    }
+
+### 财务确认订单 /confirm
+
+> 财务人员确认订单
+
+请求URL：/admin/order/confirm   
+请求方法：put  
+访问权限：公司财务  
+
+提交数据：
+
+    {
+        orderID:    //int，订单ID
+    }
+
+返回数据:
+
+    {
+        code:       //int，0代表成功, 非0代表失败
+        msg :       //string，成功或者失败说明
+    }
+
+## 课程 Lesson
+
+### 课程信息 /info
+
+> 获取某课程详情
+
+请求URL：/admin/lesson/info   
+请求方法：get  
+访问权限：已登录用户  
+
+提交数据：
+
+    {
+        lessonID:    //int，必填，订单ID
+    }
+
+返回数据：
+
+    {
+        code:       //int，0代表成功, 非0代表失败
+        msg :       //string，成功或者失败说明
+        data: {
+            lessonID:           //int, 课程ID
+            orderID:            //int, 订单ID
+            teacher:            //string，教师姓名
+            student:            //string，学生姓名
+            subject:            //string，辅导科目
+            allClass:           //int，本次课程全部课时数
+            consumedClass:      //int，已经消耗的课时数
+            weekClass:          //int，一周上几节课
+            firstClassDate:     //string，第一天上课的日期
+            startDate:          //string，课程开始日期
+            endDate:            //string，课程终止日期
+            address:            //string，日常上课地点
+            type:               //string，本次辅导方式，一对一/...
+            target:             //string，辅导目标
+            parentDemand:       //string，家长预期
+            studentDemand:      //string，学生预期
+            program:            //string，辅导方案
+            preprice:           //int，一节课单价
+            state:              //int，课程状态，1正常上课，2停课状态，3已经结课
+            stateInfo:          //string，课程状态说明
+            createTime:         //int，创建时间
+        }
+    }
+
+### 添加课程 /add
+
+> 获取某课程详情
+
+请求URL：/admin/lesson/add   
+请求方法：post  
+访问权限：已登录用户  
+
+提交数据：
+
+    {
+        orderID:            //int，订单ID，必填    
+        studentID:          //int，学生ID，必填 
+        teacherID:          //int，教师ID，必填 
+        subject:            //string，辅导科目，必填 
+        allClass:           //int，本次课程全部课时数，必填 
+        weekClass:          //int，一周上几节课
+        firstClassDate:     //string，第一天上课的日期
+        startDate:          //string，课程开始日期
+        endDate:            //string，课程终止日期
+        address:            //string，日常上课地点
+        type:               //string，本次辅导方式，一对一/...
+        target:             //string，辅导目标
+        parentDemand:       //string，家长预期
+        studentDemand:      //string，学生预期
+        program:            //string，辅导方案
+        preprice:           //int，一节课单价
+        stateInfo:          //string，课程状态说明
+    }
+
+返回数据：
+
+    {
+        code:       //int，0代表成功, 非0代表失败
+        msg :       //string，成功或者失败说明
+    }
+
+### 更改课程 /update
+
+> 获取某课程详情
+
+请求URL：/admin/lesson/update   
+请求方法：put  
+访问权限：已登录用户  
+
+提交数据：
+
+    {
+        lessonID:           //int，课程ID
+        teacherID:          //int，教师ID
+        subject:            //string，辅导科目
+        allClass:           //int，本次课程全部课时数
+        consumedClass:      //int，已经消耗的课时数
+        weekClass:          //int，一周上几节课
+        firstClassDate:     //string，第一天上课的日期
+        startDate:          //string，课程开始日期
+        endDate:            //string，课程终止日期
+        address:            //string，日常上课地点
+        type:               //string，本次辅导方式，一对一/...
+        target:             //string，辅导目标
+        parentDemand:       //string，家长预期
+        studentDemand:      //string，学生预期
+        program:            //string，辅导方案
+        preprice:           //int，一节课单价
+        state:              //int，课程状态，1正常上课，2停课状态，3已经结课
+        stateInfo:          //string，课程状态说明
+    }
+
+返回数据：
+
+    {
+        code:       //int，0代表成功, 非0代表失败
+        msg :       //string，成功或者失败说明
+    }
+
+### 删除课程 /delete
+
+> 删除订单并删除当前订单的课程
+
+请求URL：/admin/lesson/delete   
+请求方法：delete  
+访问权限：销售人员  
+
+提交数据：
+
+    {
+        lessonID:    //int，课程ID
     }
 
 返回数据:
