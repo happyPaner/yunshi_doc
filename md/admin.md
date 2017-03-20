@@ -866,6 +866,7 @@
             list:[
                 {
                     orderID:        //int，订单ID
+                    studentID:      //int，学生ID
                     name:           //string，学生姓名
                     phone:          //string，学生手机号
                     amount:         //int，缴费金额
@@ -876,8 +877,9 @@
                     lesson: [
                         {
                             lessonID:       //int，课程ID
+                            teacherID:      //int，教师ID
                             name:           //string，教师姓名
-                            teachAge:      //int，教龄
+                            teachAge:       //int，教龄
                             phone:          //string，联系电话
                             subject:        //string，科目
                             allClass:       //int，所有课时
