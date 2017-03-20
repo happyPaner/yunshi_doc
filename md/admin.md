@@ -127,7 +127,7 @@
 
     {
         staffID:    //int，选填，要查询的员工ID，值为空时返回所有员工信息
-        roler:      //int，选填，根据职位角色查询员工列表
+        roler:      //int，选填，根据职位角色查询员工列表，1超级管理员，2总经理，3销售主管，4售后主管，5销售专员，6售后专员，7财务人员
     }
 
 返回数据:
@@ -249,7 +249,387 @@
 
 ## 学生 Student
 
-> 学员、资源信息管理
+> 学员、资源信息管理，资源与学生是一对一关系，所以统一进行管理。
+
+### 学生/资源列表 /list
+
+> 获取学生/资源列表
+
+请求URL：/admin/student/list   
+请求方法：get  
+访问权限：已登录用户  
+
+提交数据：
+
+    {
+        isDeal:     //int，选填，0未成交的，1已成交已签单，空为全部
+        page:       //int，选填，页码
+    }
+
+返回数据：
+
+    {
+        code:       //int，0代表成功, 非0代表失败
+        msg :       //string，成功或者失败说明
+        data: {
+            studentID:      //int，学生ID
+            name:           //string，学生姓名
+            phone:          //string，学生手机号
+            school:         //string，学生学校
+            grade:          //string，学生年级
+            address:        //string，家庭住址
+            parent:         //string，家长姓名
+            parentPhone:    //string，家长手机号
+            headmaster:     //string，售后班主任
+            channel:        //string，资源渠道
+            developer:      //string，开发者
+            level:          //int，资源等级
+            state:          //int，资源状态，1跟进中，2已约课，3待匹配，4待试课，5试课未缴费
+        }
+    }
+
+### 学生/资源列表 /info
+
+> 获取学生/资源列表
+
+请求URL：/admin/student/info   
+请求方法：get  
+访问权限：已登录用户  
+
+提交数据：
+
+    {
+        studentID:      //int，学生ID
+    }
+
+返回数据：
+
+    {
+        code:       //int，0代表成功, 非0代表失败
+        msg :       //string，成功或者失败说明
+        data: {
+            studentID:      //int，学生ID
+            name:           //string，学生姓名
+            phone:          //string，学生手机号
+            school:         //string，学生学校
+            grade:          //string，学生年级
+            address:        //string，家庭住址
+            parent:         //string，家长姓名
+            parentPhone:    //string，家长手机号
+            headmasterID:   //int，售后班主任员工ID
+            headmaster:     //string，售后班主任
+            channel:        //string，资源渠道
+            developerID:    //int，开发者员工ID
+            developer:      //string，开发者
+            level:          //int，资源等级
+            state:          //int，资源状态，0已缴费正式成为学员，1跟进中，2已约课，3待匹配，4待试课，5试课未缴费
+        }
+    }
+
+### 添加学生/资源 /add
+
+> 获取学生/资源列表
+
+请求URL：/admin/student/add   
+请求方法：post  
+访问权限：已登录用户  
+
+提交数据：
+
+    {
+        name:           //string，学生姓名，必填
+        phone:          //string，学生手机号，必填
+        school:         //string，学生学校，必填
+        grade:          //string，学生年级，必填
+        address:        //string，家庭住址，选填
+        parent:         //string，家长姓名，选填
+        parentPhone:    //string，家长手机号，选填
+        headmasterID:   //int，售后班主任员工ID，选填
+        channel:        //string，资源渠道，选填
+        developerID:    //int，开发者员工ID，选填
+        level:          //int，资源等级，选填
+        state:          //int，资源状态，0已缴费正式成为学员，1跟进中，2已约课，3待匹配，4待试课，5试课未缴费，必填
+    }
+    
+返回数据：
+
+    {
+        code:       //int，0代表成功, 非0代表失败
+        msg :       //string，成功或者失败说明
+    }
+
+### 修改学生/资源 /update
+
+> 获取学生/资源列表
+
+请求URL：/admin/student/update   
+请求方法：put  
+访问权限：已登录用户  
+
+提交数据：
+
+    {
+        studetID:       //int，学生ID，必填
+        name:           //string，学生姓名，选填
+        phone:          //string，学生手机号，选填
+        school:         //string，学生学校，选填
+        grade:          //string，学生年级，选填
+        address:        //string，家庭住址，选填
+        parent:         //string，家长姓名，选填
+        parentPhone:    //string，家长手机号，选填
+        headmasterID:   //int，售后班主任员工ID，选填
+        channel:        //string，资源渠道，选填
+        developerID:    //int，开发者员工ID，选填
+        level:          //int，资源等级，选填
+        state:          //int，资源状态，0已缴费正式成为学员，1跟进中，2已约课，3待匹配，4待试课，5试课未缴费，选填
+    }
+    
+返回数据：
+
+    {
+        code:       //int，0代表成功, 非0代表失败
+        msg :       //string，成功或者失败说明
+    }
+
+### 删除学生/资源 /delete
+
+> 获取学生/资源列表
+
+请求URL：/admin/student/delete   
+请求方法：delete  
+访问权限：已登录用户  
+
+提交数据：
+
+    {
+        studentID:      //int，学生ID
+    }
+
+返回数据：
+
+    {
+        code:       //int，0代表成功, 非0代表失败
+        msg :       //string，成功或者失败说明
+    }
+
+## 资源跟进 Fellowup
+
+> 对学生资源的跟进记录
+
+### 跟进列表 /list
+
+请求URL：/admin/fellowup/list   
+请求方法：get  
+访问权限：已登录用户  
+
+提交参数：
+
+    {
+        studentID:      //int，学生ID，必填
+    }
+
+返回数据：
+
+    {
+        code:       //int，0代表成功, 非0代表失败
+        msg :       //string，成功或者失败说明
+        data: [
+            {
+                fellowupID:         //int，跟进记录ID
+                staff:              //string，跟进员工姓名
+                content:            //string，跟进记录
+                createTime:         //int，跟进时间，10位UNIX时间戳，单位s
+            },
+            {
+                ...
+            }
+        ]
+    }
+
+### 添加跟进记录 /add
+
+请求URL：/admin/fellowup/add   
+请求方法：post  
+访问权限：已登录用户  
+
+提交数据：
+
+    {
+        studentID:          //int，跟进记录的学生资源ID，必填
+        staffID:            //string，跟进的ID，必填
+        content:            //string，跟进记录，必填
+    }
+
+返回数据:
+
+    {
+        code:       //int，0代表成功, 非0代表失败
+        msg :       //string，成功或者失败说明
+    }
+
+### 更改跟进记录 /update
+
+请求URL：/admin/fellowup/add   
+请求方法：put  
+访问权限：已登录用户  
+
+提交数据：
+
+    {
+        fellowupID:         //int，跟进记录的ID
+        staffID:            //string，跟进的ID
+        content:            //string，跟进记录
+    }
+
+返回数据:
+
+    {
+        code:       //int，0代表成功, 非0代表失败
+        msg :       //string，成功或者失败说明
+    }
+
+### 删除跟进记录 /delete
+
+请求URL：/admin/fellowup/delete   
+请求方法：delete  
+访问权限：已登录用户  
+
+提交数据:
+
+    {
+        fellowupID:          //int，跟进记录的ID
+    }
+
+返回数据:
+
+    {
+        code:       //int，0代表成功, 非0代表失败
+        msg :       //string，成功或者失败说明
+    }
+
+## 约课管理 Appoint
+
+> 公司销售人员对学生资源的约课信息管理
+
+### 约课列表 /list
+
+> 查找某学生资源的约课列表
+
+请求URL：/admin/appoint/list   
+请求方法：get  
+访问权限：已登录用户  
+
+提交参数：
+
+    {
+        studentID:      //int，学生ID，必填
+    }
+
+返回数据：
+
+    {
+        code:       //int，0代表成功, 非0代表失败
+        msg :       //string，成功或者失败说明
+        data: [
+            {
+                appointID:          //int，跟进记录ID
+                studentID:          //int，学生ID
+                lessionID:          //int，课程ID，试课成功之后算作一次耗课
+                teacherID:          //int，约课的教师ID
+                teacher:            //string，约课的教师姓名
+                subject:            //string，约课科目
+                trialDate:          //string，试课日期
+                trialTime:          //string，试课时间段，例如：8：00-9：00
+                localtion:          //string，约课地点
+                matcherID:          //int，匹课员工ID，必填
+                matcher:            //string，匹课员工姓名
+                state:              //int，1已约课未试课，2已成交，3已放弃试课，4试课未成交
+                stateInfo:          //string，状态说明，例如放弃试课说明
+                createTime:         //int，创建时间，10位UNIX时间戳，单位s
+            },
+            {
+                ...
+            }
+        ]
+    }
+
+### 添加约课 /add
+
+> 添加某学生资源的约课信息
+
+请求URL：/admin/appoint/add   
+请求方法：post  
+访问权限：已登录用户  
+
+提交参数：
+
+    {
+        studentID:          //int，学生ID，必填
+        lessionID:          //int，课程ID，选填，试课成功之后算作一次耗课
+        teacherID:          //int，约课的教师ID，必填
+        subject:            //string，约课科目，必填
+        trialDate:          //string，试课日期，必填
+        trialTime:          //string，试课时间段，例如：8：00-9：00，必填
+        localtion:          //string，约课地点，必填
+        matcherID:          //int，匹课员工ID，必填
+    }
+
+返回数据：
+
+    {
+        code:       //int，0代表成功, 非0代表失败
+        msg :       //string，成功或者失败说明
+    }
+
+### 更改约课 /update
+
+> 更改学生资源约课信息记录
+
+请求URL：/admin/appoint/update   
+请求方法：put  
+访问权限：已登录用户  
+
+提交参数：
+
+    {
+        appointID:          //int，约课信息ID
+        studentID:          //int，学生ID，必填
+        lessionID:          //int，课程ID，选填，试课成功之后算作一次耗课
+        teacherID:          //int，约课的教师ID，必填
+        subject:            //string，约课科目，必填
+        trialDate:          //string，试课日期，必填
+        trialTime:          //string，试课时间段，例如：8：00-9：00，必填
+        localtion:          //string，约课地点，必填
+        matcherID:          //int，匹课员工ID，必填
+        state:              //int，1已约课未试课，2已成交，3已放弃试课，4试课未成交
+        stateInfo:          //string，状态说明，例如放弃试课说明
+    }
+
+返回数据：
+
+    {
+        code:       //int，0代表成功, 非0代表失败
+        msg :       //string，成功或者失败说明
+    }
+
+### 删除约课 /delete
+
+请求URL：/admin/appoint/delete   
+请求方法：delete  
+访问权限：已登录用户  
+
+提交数据:
+
+    {
+        appointID:          //int，约课记录的ID
+    }
+
+返回数据:
+
+    {
+        code:       //int，0代表成功, 非0代表失败
+        msg :       //string，成功或者失败说明
+    }
 
 ## 教师 Teacher
 
@@ -489,6 +869,7 @@
                     name:           //string，学生姓名
                     phone:          //string，学生手机号
                     amount:         //int，缴费金额
+                    salerID:        //int，销售人员ID
                     saler:          //string，销售人员姓名
                     state:          //int，状态，1已提交未被确认，2已被财务确认，3订单被取消
                     createTime:     //int，订单创建时间，10位UNIX时间戳
@@ -536,6 +917,7 @@
         msg :       //string，成功或者失败说明
         data: {
             orderID:        //int，订单ID
+            studentID:      //int，学生ID
             name:           //string，学生姓名
             phone:          //string，学生手机号
             amount:         //int，缴费金额
@@ -545,6 +927,7 @@
             lesson: [
                 {
                     lessonID:       //int，课程ID
+                    teacherID:       //int，教师ID
                     name:           //string，教师姓名
                     teacheAge:      //int，教龄
                     phone:          //string，联系电话
@@ -648,6 +1031,60 @@
 
 ## 课程 Lesson
 
+### 课程列表 /list
+
+> 根据条件获取信息
+
+请求URL：/admin/lesson/list   
+请求方法：get  
+访问权限：已登录用户  
+
+提交数据:
+
+    {
+        studentID:      //int，学生ID，选填，当与orderID同时出现时以学生ID为主
+        orderID:        //int，订单ID，选填
+        page:           //int，页码，选填，值为空为第1页
+        num:            //int，每页的条数，选填，默认为10
+    }
+
+返回数据:
+
+    {
+        code:       //int，0代表成功, 非0代表失败
+        msg :       //string，成功或者失败说明
+        data: [
+            {
+                lessonID:           //int，课程ID
+                orderID:            //int，订单ID
+                teacherID:          //int，教师ID
+                teacher:            //string，教师姓名
+                studentID:          //string，学生姓名
+                student:            //string，学生姓名
+                subject:            //string，辅导科目
+                allClass:           //int，本次课程全部课时数
+                consumedClass:      //int，已经消耗的课时数
+                weekClass:          //int，一周上几节课
+                firstClassDate:     //string，第一天上课的日期
+                startDate:          //string，课程开始日期
+                endDate:            //string，课程终止日期
+                address:            //string，日常上课地点
+                type:               //string，本次辅导方式，一对一/...
+                target:             //string，辅导目标
+                parentDemand:       //string，家长预期
+                studentDemand:      //string，学生预期
+                program:            //string，辅导方案
+                preprice:           //int，一节课单价
+                state:              //int，课程状态，1正常上课，2停课状态，3已经结课
+                stateInfo:          //string，课程状态说明
+                createTime:         //int，创建时间
+            },
+            {
+                ...
+            }
+        ]
+    }
+
 ### 课程信息 /info
 
 > 获取某课程详情
@@ -668,9 +1105,11 @@
         code:       //int，0代表成功, 非0代表失败
         msg :       //string，成功或者失败说明
         data: {
-            lessonID:           //int, 课程ID
-            orderID:            //int, 订单ID
+            lessonID:           //int，课程ID
+            orderID:            //int，订单ID
+            teacherID           //int，教师ID
             teacher:            //string，教师姓名
+            studentID:          //string，学生ID
             student:            //string，学生姓名
             subject:            //string，辅导科目
             allClass:           //int，本次课程全部课时数
