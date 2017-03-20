@@ -715,6 +715,7 @@
             freeTime:       //string，空闲时间
             zone:           //string，授课区域
             infoFrom:       //string，信息来源
+            contactID:      //int，公司接待人员ID
             contact:        //string，公司接待人员姓名
             createTime:     //int，创建时的UNIX时间戳，10位，以秒为单位
 
