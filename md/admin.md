@@ -272,19 +272,30 @@
         code:       //int，0代表成功, 非0代表失败
         msg :       //string，成功或者失败说明
         data: {
-            studentID:      //int，学生ID
-            name:           //string，学生姓名
-            phone:          //string，学生手机号
-            school:         //string，学生学校
-            grade:          //string，学生年级
-            address:        //string，家庭住址
-            parent:         //string，家长姓名
-            parentPhone:    //string，家长手机号
-            headmaster:     //string，售后班主任
-            channel:        //string，资源渠道
-            developer:      //string，开发者
-            level:          //int，资源等级
-            state:          //int，资源状态，1跟进中，2已约课，3待匹配，4待试课，5试课未缴费
+            page:       //int，当前页码
+            allPage:    //int，总页码数
+            list: [
+                {
+                    studentID:      //int，学生ID
+                    name:           //string，学生姓名
+                    phone:          //string，学生手机号
+                    school:         //string，学生学校
+                    grade:          //string，学生年级
+                    address:        //string，家庭住址
+                    parent:         //string，家长姓名
+                    parentPhone:    //string，家长手机号
+                    headmasterID:   //string，售后班主任ID
+                    headmaster:     //string，售后班主任
+                    chanel:        //string，资源渠道
+                    developerID:    //string，开发者员工ID
+                    developer:      //string，开发者
+                    level:          //int，资源等级
+                    state:          //int，资源状态，1跟进中，2已约课，3待匹配，4待试课，5试课未缴费
+                },
+                {
+                    ...
+                }
+            ]
         }
     }
 
@@ -318,7 +329,7 @@
             parentPhone:    //string，家长手机号
             headmasterID:   //int，售后班主任员工ID
             headmaster:     //string，售后班主任
-            channel:        //string，资源渠道
+            chanel:        //string，资源渠道
             developerID:    //int，开发者员工ID
             developer:      //string，开发者
             level:          //int，资源等级
