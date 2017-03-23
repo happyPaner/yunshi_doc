@@ -222,19 +222,30 @@
     code:       //int&#xFF0C;0&#x4EE3;&#x8868;&#x6210;&#x529F;, &#x975E;0&#x4EE3;&#x8868;&#x5931;&#x8D25;
     msg :       //string&#xFF0C;&#x6210;&#x529F;&#x6216;&#x8005;&#x5931;&#x8D25;&#x8BF4;&#x660E;
     data: {
-        studentID:      //int&#xFF0C;&#x5B66;&#x751F;ID
-        name:           //string&#xFF0C;&#x5B66;&#x751F;&#x59D3;&#x540D;
-        phone:          //string&#xFF0C;&#x5B66;&#x751F;&#x624B;&#x673A;&#x53F7;
-        school:         //string&#xFF0C;&#x5B66;&#x751F;&#x5B66;&#x6821;
-        grade:          //string&#xFF0C;&#x5B66;&#x751F;&#x5E74;&#x7EA7;
-        address:        //string&#xFF0C;&#x5BB6;&#x5EAD;&#x4F4F;&#x5740;
-        parent:         //string&#xFF0C;&#x5BB6;&#x957F;&#x59D3;&#x540D;
-        parentPhone:    //string&#xFF0C;&#x5BB6;&#x957F;&#x624B;&#x673A;&#x53F7;
-        headmaster:     //string&#xFF0C;&#x552E;&#x540E;&#x73ED;&#x4E3B;&#x4EFB;
-        channel:        //string&#xFF0C;&#x8D44;&#x6E90;&#x6E20;&#x9053;
-        developer:      //string&#xFF0C;&#x5F00;&#x53D1;&#x8005;
-        level:          //int&#xFF0C;&#x8D44;&#x6E90;&#x7B49;&#x7EA7;
-        state:          //int&#xFF0C;&#x8D44;&#x6E90;&#x72B6;&#x6001;&#xFF0C;1&#x8DDF;&#x8FDB;&#x4E2D;&#xFF0C;2&#x5DF2;&#x7EA6;&#x8BFE;&#xFF0C;3&#x5F85;&#x5339;&#x914D;&#xFF0C;4&#x5F85;&#x8BD5;&#x8BFE;&#xFF0C;5&#x8BD5;&#x8BFE;&#x672A;&#x7F34;&#x8D39;
+        page:       //int&#xFF0C;&#x5F53;&#x524D;&#x9875;&#x7801;
+        allPage:    //int&#xFF0C;&#x603B;&#x9875;&#x7801;&#x6570;
+        list: [
+            {
+                studentID:      //int&#xFF0C;&#x5B66;&#x751F;ID
+                name:           //string&#xFF0C;&#x5B66;&#x751F;&#x59D3;&#x540D;
+                phone:          //string&#xFF0C;&#x5B66;&#x751F;&#x624B;&#x673A;&#x53F7;
+                school:         //string&#xFF0C;&#x5B66;&#x751F;&#x5B66;&#x6821;
+                grade:          //string&#xFF0C;&#x5B66;&#x751F;&#x5E74;&#x7EA7;
+                address:        //string&#xFF0C;&#x5BB6;&#x5EAD;&#x4F4F;&#x5740;
+                parent:         //string&#xFF0C;&#x5BB6;&#x957F;&#x59D3;&#x540D;
+                parentPhone:    //string&#xFF0C;&#x5BB6;&#x957F;&#x624B;&#x673A;&#x53F7;
+                headmasterID:   //string&#xFF0C;&#x552E;&#x540E;&#x73ED;&#x4E3B;&#x4EFB;ID
+                headmaster:     //string&#xFF0C;&#x552E;&#x540E;&#x73ED;&#x4E3B;&#x4EFB;
+                chanel:        //string&#xFF0C;&#x8D44;&#x6E90;&#x6E20;&#x9053;
+                developerID:    //string&#xFF0C;&#x5F00;&#x53D1;&#x8005;&#x5458;&#x5DE5;ID
+                developer:      //string&#xFF0C;&#x5F00;&#x53D1;&#x8005;
+                level:          //int&#xFF0C;&#x8D44;&#x6E90;&#x7B49;&#x7EA7;
+                state:          //int&#xFF0C;&#x8D44;&#x6E90;&#x72B6;&#x6001;&#xFF0C;1&#x8DDF;&#x8FDB;&#x4E2D;&#xFF0C;2&#x5DF2;&#x7EA6;&#x8BFE;&#xFF0C;3&#x5F85;&#x5339;&#x914D;&#xFF0C;4&#x5F85;&#x8BD5;&#x8BFE;&#xFF0C;5&#x8BD5;&#x8BFE;&#x672A;&#x7F34;&#x8D39;
+            },
+            {
+                ...
+            }
+        ]
     }
 }
 </code></pre><h3 id="t16&#x5B66;&#x751F;/&#x8D44;&#x6E90;&#x5217;&#x8868; /info">&#x5B66;&#x751F;/&#x8D44;&#x6E90;&#x5217;&#x8868; /info <a href="#t16&#x5B66;&#x751F;/&#x8D44;&#x6E90;&#x5217;&#x8868; /info"> # </a></h3>
@@ -261,7 +272,7 @@
         parentPhone:    //string&#xFF0C;&#x5BB6;&#x957F;&#x624B;&#x673A;&#x53F7;
         headmasterID:   //int&#xFF0C;&#x552E;&#x540E;&#x73ED;&#x4E3B;&#x4EFB;&#x5458;&#x5DE5;ID
         headmaster:     //string&#xFF0C;&#x552E;&#x540E;&#x73ED;&#x4E3B;&#x4EFB;
-        channel:        //string&#xFF0C;&#x8D44;&#x6E90;&#x6E20;&#x9053;
+        chanel:        //string&#xFF0C;&#x8D44;&#x6E90;&#x6E20;&#x9053;
         developerID:    //int&#xFF0C;&#x5F00;&#x53D1;&#x8005;&#x5458;&#x5DE5;ID
         developer:      //string&#xFF0C;&#x5F00;&#x53D1;&#x8005;
         level:          //int&#xFF0C;&#x8D44;&#x6E90;&#x7B49;&#x7EA7;
