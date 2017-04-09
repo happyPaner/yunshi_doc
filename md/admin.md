@@ -329,7 +329,8 @@
             parentPhone:    //string，家长手机号
             headmasterID:   //int，售后班主任员工ID
             headmaster:     //string，售后班主任
-            chanel:        //string，资源渠道
+            chanel:         //string，资源渠道
+            remark:         //string，备注
             developerID:    //int，开发者员工ID
             developer:      //string，开发者
             level:          //int，资源等级
@@ -357,6 +358,7 @@
         parentPhone:    //string，家长手机号，选填
         headmasterID:   //int，售后班主任员工ID，选填
         channel:        //string，资源渠道，选填
+        remark:         //string，备注，选填
         developerID:    //int，开发者员工ID，选填
         level:          //int，资源等级，选填
         state:          //int，资源状态，0已缴费正式成为学员，1跟进中，2已约课，3待匹配，4待试课，5试课未缴费，必填
@@ -390,6 +392,7 @@
         parentPhone:    //string，家长手机号，选填
         headmasterID:   //int，售后班主任员工ID，选填
         channel:        //string，资源渠道，选填
+        remark:         //string，备注信息
         developerID:    //int，开发者员工ID，选填
         level:          //int，资源等级，选填
         state:          //int，资源状态，0已缴费正式成为学员，1跟进中，2已约课，3待匹配，4待试课，5试课未缴费，选填
@@ -672,6 +675,7 @@
                 {
                     teacherID:  //int，教师ID
                     name:       //string，教师姓名
+                    photo:      //string，教师照片头像
                     age:        //int，年龄
                     teachAge:   //int，教龄
                     subject:    //int，教学科目
@@ -943,7 +947,7 @@
                     lessonID:       //int，课程ID
                     teacherID:       //int，教师ID
                     name:           //string，教师姓名
-                    teacheAge:      //int，教龄
+                    teachAge:      //int，教龄
                     phone:          //string，联系电话
                     subject:        //string，科目
                     allClass:       //int，所有课时
