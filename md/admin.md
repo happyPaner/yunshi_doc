@@ -979,19 +979,19 @@
         salerID:        //int，销售员工ID
         lesson: [       //array，随订单一起确定的课程
             {
-                teacherID:       //int，教师ID
+                teacherID:      //int，教师ID
                 subject:        //string，科目
                 allClass:       //int，总课时数
                 preprice:       //int，单课时费
                 weekClass:      //int，一周上几节课
-                firstClassDate: //string，第一次上课日期，2017-3-18
-                startDate:      //string，课程开始日期，2017-3-18
+                studyCircle:    //string，学习周期
                 endDate:        //string，课程结束日期，2017-3-18
                 classType:      //string，代课类型，一对一
                 target:         //string，辅导目标，拔高/冲刺/...
                 parentDemand:   //string，家长期望
                 studentDemand:  //string，学生期望  
                 program:        //string，辅导方案
+                preprice:       //int，一节课单价
             },
             {
                 ...
@@ -1084,8 +1084,7 @@
                 consumedClass:      //int，已经消耗的课时数
                 weekClass:          //int，一周上几节课
                 firstClassDate:     //string，第一天上课的日期
-                startDate:          //string，课程开始日期
-                endDate:            //string，课程终止日期
+                studyCircle:        //string，课程周期日期
                 address:            //string，日常上课地点
                 type:               //string，本次辅导方式，一对一/...
                 target:             //string，辅导目标
@@ -1134,8 +1133,7 @@
             consumedClass:      //int，已经消耗的课时数
             weekClass:          //int，一周上几节课
             firstClassDate:     //string，第一天上课的日期
-            startDate:          //string，课程开始日期
-            endDate:            //string，课程终止日期
+            studyCircle:        //string，学习周期
             address:            //string，日常上课地点
             type:               //string，本次辅导方式，一对一/...
             target:             //string，辅导目标
@@ -1167,8 +1165,7 @@
         allClass:           //int，本次课程全部课时数，必填 
         weekClass:          //int，一周上几节课
         firstClassDate:     //string，第一天上课的日期
-        startDate:          //string，课程开始日期
-        endDate:            //string，课程终止日期
+        studyCircle:        //string，学习周期
         address:            //string，日常上课地点
         type:               //string，本次辅导方式，一对一/...
         target:             //string，辅导目标
@@ -1204,8 +1201,7 @@
         consumedClass:      //int，已经消耗的课时数
         weekClass:          //int，一周上几节课
         firstClassDate:     //string，第一天上课的日期
-        startDate:          //string，课程开始日期
-        endDate:            //string，课程终止日期
+        studyCircle:        //string，学习周期
         address:            //string，日常上课地点
         type:               //string，本次辅导方式，一对一/...
         target:             //string，辅导目标
