@@ -21,7 +21,7 @@
 <div class="warpper">
 
     <div class="page-toc">
-        <ul><li><a href="#t0学生端api设计文档">学生端api设计文档</a><ul><li><a href="#t1update log">update log</a><ul><li><a href="#t22017-03-08 1:14 api更改日志">2017-03-08 1:14 api更改日志</a></li><li><a href="#t32017-03-10 api更改说明">2017-03-10 api更改说明</a></li><li><a href="#t42017-03-12 api更改说明">2017-03-12 api更改说明</a></li></ul></li><li><a href="#t5api">api</a><ul><li><a href="#t6绑定微信：/bind">绑定微信：/bind</a></li><li><a href="#t7解除绑定微信：/unbind">解除绑定微信：/unbind</a></li><li><a href="#t8主页信息：/index">主页信息：/index</a></li><li><a href="#t9课程信息: /restClass">课程信息: /restClass</a></li><li><a href="#t10已确认课时：/confirmed">已确认课时：/confirmed</a></li><li><a href="#t11未确认课时：/unconfirmed">未确认课时：/unconfirmed</a></li><li><a href="#t12确认课时：/confirmClass">确认课时：/confirmClass</a></li><li><a href="#t13本周待上课：/attendClass">本周待上课：/attendClass</a></li><li><a href="#t14我要推荐：/recommend">我要推荐：/recommend</a></li><li><a href="#t15我要续费：/renew">我要续费：/renew</a></li><li><a href="#t16广告详情：/ad">广告详情：/ad</a></li></ul></li></ul></li></ul>
+        <ul><li><a href="#t0学生端api设计文档">学生端api设计文档</a><ul><li><a href="#t1update log">update log</a><ul><li><a href="#t22017-03-08 1:14 api更改日志">2017-03-08 1:14 api更改日志</a></li><li><a href="#t32017-03-10 api更改说明">2017-03-10 api更改说明</a></li><li><a href="#t42017-03-12 api更改说明">2017-03-12 api更改说明</a></li></ul></li><li><a href="#t5api">api</a><ul><li><a href="#t6绑定微信：/bind">绑定微信：/bind</a></li><li><a href="#t7解除绑定微信：/unbind">解除绑定微信：/unbind</a></li><li><a href="#t8主页信息：/index">主页信息：/index</a></li><li><a href="#t9课程信息: /restClass">课程信息: /restClass</a></li><li><a href="#t10已确认课时：/confirmed">已确认课时：/confirmed</a></li><li><a href="#t11未确认课时：/unconfirmed">未确认课时：/unconfirmed</a></li><li><a href="#t12确认课时：/confirmClass">确认课时：/confirmClass</a></li><li><a href="#t13本周待上课：/attendClass">本周待上课：/attendClass</a></li><li><a href="#t14我得老师：/teacher">我得老师：/teacher</a></li><li><a href="#t15我要推荐：/recommend">我要推荐：/recommend</a></li><li><a href="#t16我要续费：/renew">我要续费：/renew</a></li><li><a href="#t17广告详情：/ad">广告详情：/ad</a></li></ul></li></ul></li></ul>
     </div>
     
     <div class="content markdown-body">
@@ -145,7 +145,7 @@
 <blockquote>
 <p>&#x83B7;&#x53D6;&#x5B66;&#x751F;&#x5F53;&#x524D;&#x6240;&#x6709;&#x5DF2;&#x786E;&#x8BA4;&#x8BFE;&#x65F6;&#x8BE6;&#x7EC6;&#x5217;&#x8868;</p>
 </blockquote>
-<p>&#x8BF7;&#x6C42;URL&#xFF1A;/s/comfired
+<p>&#x8BF7;&#x6C42;URL&#xFF1A;/s/confirmed
 &#x8BF7;&#x6C42;&#x65B9;&#x6CD5;&#xFF1A;get<br>&#x8BBF;&#x95EE;&#x6743;&#x9650;&#xFF1A;&#x5DF2;&#x7ED1;&#x5B9A;&#x5B66;&#x751F;&#x7528;&#x6237;  </p>
 <p>URL&#x53C2;&#x6570;&#xFF1A;&#x65E0;</p>
 <p>&#x8FD4;&#x56DE;&#x6570;&#x636E;&#xFF1A;</p>
@@ -224,7 +224,38 @@
             }
         ]
 }
-</code></pre><h3 id="t14&#x6211;&#x8981;&#x63A8;&#x8350;&#xFF1A;/recommend">&#x6211;&#x8981;&#x63A8;&#x8350;&#xFF1A;/recommend <a href="#t14&#x6211;&#x8981;&#x63A8;&#x8350;&#xFF1A;/recommend"> # </a></h3>
+</code></pre><h3 id="t14&#x6211;&#x5F97;&#x8001;&#x5E08;&#xFF1A;/teacher">&#x6211;&#x5F97;&#x8001;&#x5E08;&#xFF1A;/teacher <a href="#t14&#x6211;&#x5F97;&#x8001;&#x5E08;&#xFF1A;/teacher"> # </a></h3>
+<blockquote>
+<p>&#x83B7;&#x53D6;&#x5B66;&#x751F;&#x4EFB;&#x8BFE;&#x6559;&#x5E08;</p>
+</blockquote>
+<p>&#x8BF7;&#x6C42;URL&#xFF1A;/s/teacher<br>&#x8BF7;&#x6C42;&#x65B9;&#x6CD5;&#xFF1A;get<br>&#x8BBF;&#x95EE;&#x6743;&#x9650;&#xFF1A;&#x5DF2;&#x7ED1;&#x5B9A;&#x5B66;&#x751F;&#x7528;&#x6237;  </p>
+<p>URL&#x53C2;&#x6570;&#xFF1A;&#x65E0;</p>
+<p>&#x8FD4;&#x56DE;&#x6570;&#x636E;&#xFF1A;</p>
+<pre><code>{
+    code:       //int&#xFF0C;0&#x4EE3;&#x8868;&#x6210;&#x529F;, 1&#x4EE3;&#x8868;&#x672A;&#x767B;&#x5F55;&#x6216;&#x672A;&#x7ED1;&#x5B9A;&#x5FAE;&#x4FE1;&#xFF0C;&#x5176;&#x4ED6;&#x503C;&#x4E3A;&#x5176;&#x4ED6;&#x539F;&#x56E0;&#x5931;&#x8D25;
+    msg :       //string&#xFF0C;&#x8FD4;&#x56DE;&#x4FE1;&#x606F;&#x8BF4;&#x660E; 
+    data:[      //array&#xFF0C;&#x6211;&#x5F97;&#x8001;&#x5E08;&#x5217;&#x8868;
+            {
+                teacherID:       //&#x6559;&#x5E08;ID
+                name:            //&#x8001;&#x5E08;&#x59D3;&#x540D;
+                lessonID:        //&#x8BFE;&#x7A0B;id
+                subject:         //&#x79D1;&#x76EE;
+                allClass:        //&#x5168;&#x90E8;&#x8BFE;&#x65F6;
+                phone:           //&#x6559;&#x5E08;&#x7535;&#x8BDD;
+                sex:             //&#x6027;&#x522B;
+                age:             //&#x5E74;&#x9F84;
+                photo:           //&#x7167;&#x7247;&#x5730;&#x5740;
+                teachAge:        //&#x6559;&#x9F84;
+                classType:       //&#x6559;&#x5B66;&#x7C7B;&#x578B;
+                preprice:        //&#x5355;&#x8282;&#x4EF7;&#x683C;
+                teachIntro:      //&#x6559;&#x5B66;&#x7B80;&#x6D01;
+            },
+            {
+                ...
+            }
+        ]
+}
+</code></pre><h3 id="t15&#x6211;&#x8981;&#x63A8;&#x8350;&#xFF1A;/recommend">&#x6211;&#x8981;&#x63A8;&#x8350;&#xFF1A;/recommend <a href="#t15&#x6211;&#x8981;&#x63A8;&#x8350;&#xFF1A;/recommend"> # </a></h3>
 <blockquote>
 <p>&#x5B66;&#x751F;&#x63D0;&#x4EA4;&#x63A8;&#x8350;&#x4FE1;&#x606F;&#x63A5;&#x53E3;</p>
 </blockquote>
@@ -238,7 +269,7 @@
     code:       //int&#xFF0C;0&#x4EE3;&#x8868;&#x6210;&#x529F;, 1&#x4EE3;&#x8868;&#x672A;&#x767B;&#x5F55;&#x6216;&#x672A;&#x7ED1;&#x5B9A;&#x5FAE;&#x4FE1;&#xFF0C;&#x5176;&#x4ED6;&#x503C;&#x4E3A;&#x5176;&#x4ED6;&#x539F;&#x56E0;&#x5931;&#x8D25;
     msg :       //string&#xFF0C;&#x8FD4;&#x56DE;&#x4FE1;&#x606F;&#x8BF4;&#x660E; 
 }
-</code></pre><h3 id="t15&#x6211;&#x8981;&#x7EED;&#x8D39;&#xFF1A;/renew">&#x6211;&#x8981;&#x7EED;&#x8D39;&#xFF1A;/renew <a href="#t15&#x6211;&#x8981;&#x7EED;&#x8D39;&#xFF1A;/renew"> # </a></h3>
+</code></pre><h3 id="t16&#x6211;&#x8981;&#x7EED;&#x8D39;&#xFF1A;/renew">&#x6211;&#x8981;&#x7EED;&#x8D39;&#xFF1A;/renew <a href="#t16&#x6211;&#x8981;&#x7EED;&#x8D39;&#xFF1A;/renew"> # </a></h3>
 <blockquote>
 <p>&#x5B66;&#x751F;&#x63D0;&#x4EA4;&#x7EED;&#x8D39;&#x4FE1;&#x606F;&#x63A5;&#x53E3;</p>
 </blockquote>
@@ -252,7 +283,7 @@
     code:       //int&#xFF0C;0&#x4EE3;&#x8868;&#x6210;&#x529F;, 1&#x4EE3;&#x8868;&#x672A;&#x767B;&#x5F55;&#x6216;&#x672A;&#x7ED1;&#x5B9A;&#x5FAE;&#x4FE1;&#xFF0C;&#x5176;&#x4ED6;&#x503C;&#x4E3A;&#x5176;&#x4ED6;&#x539F;&#x56E0;&#x5931;&#x8D25;
     msg :       //string&#xFF0C;&#x8FD4;&#x56DE;&#x4FE1;&#x606F;&#x8BF4;&#x660E; 
 }
-</code></pre><h3 id="t16&#x5E7F;&#x544A;&#x8BE6;&#x60C5;&#xFF1A;/ad">&#x5E7F;&#x544A;&#x8BE6;&#x60C5;&#xFF1A;/ad <a href="#t16&#x5E7F;&#x544A;&#x8BE6;&#x60C5;&#xFF1A;/ad"> # </a></h3>
+</code></pre><h3 id="t17&#x5E7F;&#x544A;&#x8BE6;&#x60C5;&#xFF1A;/ad">&#x5E7F;&#x544A;&#x8BE6;&#x60C5;&#xFF1A;/ad <a href="#t17&#x5E7F;&#x544A;&#x8BE6;&#x60C5;&#xFF1A;/ad"> # </a></h3>
 <blockquote>
 <p>&#x901A;&#x8FC7;&#x6B64;&#x63A5;&#x53E3;&#x83B7;&#x53D6;&#x5E7F;&#x544A;&#x8BE6;&#x60C5;</p>
 </blockquote>

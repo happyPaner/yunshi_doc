@@ -334,7 +334,7 @@
             developerID:    //int，开发者员工ID
             developer:      //string，开发者
             level:          //int，资源等级
-            state:          //int，资源状态，0已缴费正式成为学员，1跟进中，2已约课，3待匹配，4待试课，5试课未缴费
+            state:          //int，资源状态，0已缴费正式成为学员，1跟进中，2已约课，3待匹配，4待试课，5试课未缴费，6试课失败
         }
     }
 
@@ -361,7 +361,7 @@
         remark:         //string，备注，选填
         developerID:    //int，开发者员工ID，选填
         level:          //int，资源等级，选填
-        state:          //int，资源状态，0已缴费正式成为学员，1跟进中，2已约课，3待匹配，4待试课，5试课未缴费，必填
+        state:          //int，资源状态，0已缴费正式成为学员，1跟进中，2已约课，3待匹配，4待试课，5试课未缴费，6试课失败，必填
     }
     
 返回数据：
@@ -479,6 +479,7 @@
     {
         code:       //int，0代表成功, 非0代表失败
         msg :       //string，成功或者失败说明
+        data:       //int，新添加记录的id
     }
 
 ### 更改跟进记录 /update
@@ -593,6 +594,7 @@
     {
         code:       //int，0代表成功, 非0代表失败
         msg :       //string，成功或者失败说明
+        data:       //int，新添加记录的id
     }
 
 ### 更改约课 /update
@@ -985,7 +987,6 @@
                 preprice:       //int，单课时费
                 weekClass:      //int，一周上几节课
                 studyCircle:    //string，学习周期
-                endDate:        //string，课程结束日期，2017-3-18
                 classType:      //string，代课类型，一对一
                 target:         //string，辅导目标，拔高/冲刺/...
                 parentDemand:   //string，家长期望
@@ -1003,6 +1004,7 @@
     {
         code:       //int，0代表成功, 非0代表失败
         msg :       //string，成功或者失败说明
+        data:       //int，新添加记录的id
     }
 
 ### 删除订单 /delete

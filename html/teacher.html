@@ -21,7 +21,7 @@
 <div class="warpper">
 
     <div class="page-toc">
-        <ul><li><a href="#t0教师端API设计文档">教师端API设计文档</a><ul><li><a href="#t1update log">update log</a><ul><li><a href="#t22017-03-12 api更改说明">2017-03-12 api更改说明</a></li></ul></li><li><a href="#t3api">api</a><ul><li><a href="#t4绑定微信：/bind">绑定微信：/bind</a></li><li><a href="#t5解除绑定微信：/unbind">解除绑定微信：/unbind</a></li><li><a href="#t6首页数据：/index">首页数据：/index</a></li><li><a href="#t7学生列表：/student">学生列表：/student</a></li><li><a href="#t8已确认课时汇总：/confirmedInfo">已确认课时汇总：/confirmedInfo</a></li><li><a href="#t9已确认课时：/confirmed">已确认课时：/confirmed</a></li><li><a href="#t10未确认课时：/unconfirmed">未确认课时：/unconfirmed</a></li><li><a href="#t11发起确认：/confirmClass">发起确认：/confirmClass</a></li><li><a href="#t12发起排课：/planClass">发起排课：/planClass</a></li></ul></li></ul></li></ul>
+        <ul><li><a href="#t0教师端API设计文档">教师端API设计文档</a><ul><li><a href="#t1update log">update log</a><ul><li><a href="#t22017-03-12 api更改说明">2017-03-12 api更改说明</a></li></ul></li><li><a href="#t3api">api</a><ul><li><a href="#t4绑定微信：/bind">绑定微信：/bind</a></li><li><a href="#t5解除绑定微信：/unbind">解除绑定微信：/unbind</a></li><li><a href="#t6首页数据：/index">首页数据：/index</a></li><li><a href="#t7学生列表：/student">学生列表：/student</a></li><li><a href="#t8已确认课时汇总：/confirmedInfo">已确认课时汇总：/confirmedInfo</a></li><li><a href="#t9已确认课时：/confirmed">已确认课时：/confirmed</a></li><li><a href="#t10未确认课时：/unconfirmed">未确认课时：/unconfirmed</a></li><li><a href="#t11发起确认：/confirmClass">发起确认：/confirmClass</a></li><li><a href="#t12发起排课：/planClass">发起排课：/planClass</a></li><li><a href="#t13删除排课：/removeClass">删除排课：/removeClass</a></li></ul></li></ul></li></ul>
     </div>
     
     <div class="content markdown-body">
@@ -235,6 +235,21 @@
     timeslot:       //string&#xFF0C;&#x4E0A;&#x8BFE;&#x65F6;&#x95F4;&#x6BB5;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;&quot;8:00-12:00&quot;,&quot;19:00-21:00&quot;
     classNum:       //int&#xFF0C;&#x672C;&#x6B21;&#x8BFE;&#x65F6;&#x6570;
     type:           //int, 1&#x6B63;&#x5E38;&#x4E0A;&#x8BFE;&#xFF0C;2&#x52A0;&#x8BFE;&#xFF0C;3&#x8C03;&#x8BFE;
+}
+</code></pre><p>&#x8FD4;&#x56DE;&#x53C2;&#x6570;:</p>
+<pre><code>{
+    code&#xFF1A;      //int&#xFF0C;0&#x4EE3;&#x8868;&#x6210;&#x529F;&#xFF0C;1&#x4EE3;&#x8868;&#x672A;&#x767B;&#x5F55;&#x6216;&#x672A;&#x7ED1;&#x5B9A;&#x5FAE;&#x4FE1;&#xFF0C;&#x5176;&#x4ED6;&#x503C;&#x672A;&#x5176;&#x4ED6;&#x9519;&#x8BEF;
+    msg :       //string&#xFF0C;&#x8FD4;&#x56DE;&#x72B6;&#x6001;&#x8BF4;&#x660E;
+}
+</code></pre><h3 id="t13&#x5220;&#x9664;&#x6392;&#x8BFE;&#xFF1A;/removeClass">&#x5220;&#x9664;&#x6392;&#x8BFE;&#xFF1A;/removeClass <a href="#t13&#x5220;&#x9664;&#x6392;&#x8BFE;&#xFF1A;/removeClass"> # </a></h3>
+<blockquote>
+<p>&#x6559;&#x5E08;&#x901A;&#x8FC7;&#x6B64;&#x63A5;&#x53E3;&#x5BF9;&#x5220;&#x9664;&#x672A;&#x786E;&#x8BA4;&#x4E14;&#x672A;&#x53D1;&#x8D77;&#x7684;&#x6392;&#x8BFE;</p>
+</blockquote>
+<p>&#x8BF7;&#x6C42;URL&#xFF1A;/t/removeClass
+&#x8BF7;&#x6C42;&#x65B9;&#x6CD5;&#xFF1A;get<br>&#x8BBF;&#x95EE;&#x6743;&#x9650;&#xFF1A;&#x5DF2;&#x7ED1;&#x5B9A;&#x6559;&#x5E08;&#x7528;&#x6237;  </p>
+<p>&#x63D0;&#x4EA4;&#x53C2;&#x6570;&#xFF1A;</p>
+<pre><code>{
+    classID:       //int&#xFF0C;&#x8BE5;&#x8BFE;&#x65F6;&#x7684;&#x8BFE;&#x7A0B;ID
 }
 </code></pre><p>&#x8FD4;&#x56DE;&#x53C2;&#x6570;:</p>
 <pre><code>{

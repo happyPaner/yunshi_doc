@@ -155,7 +155,7 @@ URL参数：无
 
 > 获取学生当前所有已确认课时详细列表
 
-请求URL：/s/comfired
+请求URL：/s/confirmed
 请求方法：get  
 访问权限：已绑定学生用户  
 
@@ -258,6 +258,43 @@ URL参数：无
             ]
     }
 
+
+### 我得老师：/teacher
+
+> 获取学生任课教师
+
+请求URL：/s/teacher  
+请求方法：get  
+访问权限：已绑定学生用户  
+
+URL参数：无
+
+返回数据：
+
+    {
+        code:       //int，0代表成功, 1代表未登录或未绑定微信，其他值为其他原因失败
+        msg :       //string，返回信息说明 
+        data:[      //array，我得老师列表
+                {
+                    teacherID:       //教师ID
+                    name:            //老师姓名
+                    lessonID:        //课程id
+                    subject:         //科目
+                    allClass:        //全部课时
+                    phone:           //教师电话
+                    sex:             //性别
+                    age:             //年龄
+                    photo:           //照片地址
+                    teachAge:        //教龄
+                    classType:       //教学类型
+                    preprice:        //单节价格
+                    teachIntro:      //教学简洁
+                },
+                {
+                    ...
+                }
+            ]
+    }
 
 ### 我要推荐：/recommend
 
